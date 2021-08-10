@@ -19,13 +19,18 @@
 
   <header class="header">
     <div class="header__nav-logo-container">
-      <img src="/images/logo.svg" alt="Blogr landing-page text logo." class="logo">
-      <!-- add clickable logo -->
+      <a href="/"><img src="/images/logo.svg" alt="Blogr landing-page text logo." class="logo"></a>
+      <button class="hamburger-btn">
+        <img src="/images/icon-hamburger.svg" alt="Interactive mobile hamburger icon." class="hamburger-icon" id="hamburger">
+      </button>
 
       <nav class="header__nav">
         <ul class="header-nav__ul">
           <li>
-            <button class="header-nav__btn white">Product</button>
+            <button class="header-nav__btn white">
+              Product
+              <i class="arrow"></i>
+            </button>
             <li class="hidden header-nav__links-container">
               <a href="/">Overview</a>
               <a href="/">Pricing</a>
@@ -35,7 +40,10 @@
             </li>
           </li>
           <li>
-            <button class="header-nav__btn white">Company</button>
+            <button class="header-nav__btn white">
+              Company
+              <i class="arrow"></i>
+            </button>
             <li class="hidden header-nav__links-container">
               <a href="/">About</a>
               <a href="/">Team</a>
@@ -44,7 +52,10 @@
             </li>
           </li>
           <li>
-            <button class="header-nav__btn white">Connect</button>
+            <button class="header-nav__btn white">
+              Connect
+              <i class="arrow"></i>
+            </button>
             <li class="hidden header-nav__links-container">
               <a href="/">Contact</a>
               <a href="/">Newsletter</a>
