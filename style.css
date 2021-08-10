@@ -40,3 +40,7 @@ Background gradient - body:
 body {
   font: 1em/1.5 "Overpass", "Ubuntu", sans-serif;
 }
+
+a {
+  display: block;
+}
