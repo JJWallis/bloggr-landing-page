@@ -3,8 +3,9 @@
 TO DO:
 
 Header background gradient 
-JS - mobile nav logic 
-Alignment on header nav li's compared to buttons
+Alignment header navs arrows 
+JS - mobile nav logic + hiding/showing nav uls
+
 
 ### Primary
 
@@ -85,6 +86,8 @@ button {
 
 .header__mobilebg-nav-container {
   width: 100%;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
   position: absolute;
   top: 50px;
   left: 50%;
@@ -92,8 +95,6 @@ button {
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 2rem 1rem;
-  margin-top: 1rem;
 }
 
 .header__nav,
@@ -105,27 +106,66 @@ button {
 }
 
 .header-nav__btn {
+  position: relative;
+}
+
+.header-nav__btn,
+.header-nav__ul a,
+.login,
+.sign-up {
   font-weight: 600;
+}
+
+.header-nav__btn,
+.login,
+.sign-up {
   font-size: 1.2rem;
 }
 
 .arrow::before {
   content: url("./images/icon-arrow-dark.svg");
   display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
 }
 
 .header-nav__ul {
+  width: 90%;
+  margin-block: 1.1rem;
+  padding-block: 0.5rem;
   background-color: rgba(200, 200, 203, 0.3);
   border-radius: 5px;
-  width: 90%;
-  padding-block: 1rem;
-  margin-block: 1.1rem;
 }
 
 .header-nav__ul a {
+  padding-block: 1rem;
   color: rgba(31, 63, 91, 0.8);
-  font-weight: 600;
-  margin-block: 1rem;
+}
+
+.hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login {
+  padding-block: 1.5rem;
+  width: 90%;
+}
+
+.sign-up {
+  border-radius: 50px;
+  padding: 0.8em 1.8em;
+  color: white;
+  background-image: linear-gradient(
+    to left,
+    hsl(356, 100%, 66%),
+    rgba(255, 143, 112)
+  );
+  transition: 400ms;
 }
 /* ====================================
                   MAIN
@@ -150,6 +190,10 @@ button {
 
 .header-nav__ul a:hover {
   color: rgba(31, 63, 91);
+}
+
+.sign-up:hover {
+  transform: scale(1.1);
 }
 
 /* ====================================
