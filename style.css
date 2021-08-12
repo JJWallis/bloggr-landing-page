@@ -10,7 +10,7 @@ TO DO:
 
 ### Neutral
 
-- White (text): hsl(0, 0%, 100%)
+- White (text): hsl(0, 0%, 100%) 
 - Grayish blue (footer text): hsl(240, 2%, 79%)
 - Very dark grayish blue (body copy): hsl(207, 13%, 34%)
 - Very dark black blue (footer background): hsl(240, 10%, 16%)
@@ -38,5 +38,42 @@ Background gradient - body:
 } */
 
 body {
-  font: 1em/1.5 "Overpass", "Ubuntu", sans-serif;
+  font: 1rem/1.5 "Overpass", "Ubuntu", sans-serif;
+  color: hsl(207, 13%, 34%);
 }
+
+/* ====================================
+                  RESET 
+ ====================================== */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* ====================================
+                HEADER 
+ ====================================== */
+
+/* ====================================
+                  MAIN
+ ====================================== */
+
+/* ====================================
+                  FOOTER 
+ ====================================== */
+
+/* ====================================
+              INTERACTIVE
+ ====================================== */
+
+/* ====================================
+              MEDIA QUERIES 
+ ====================================== */
