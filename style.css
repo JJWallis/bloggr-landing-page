@@ -2,17 +2,12 @@
 
 TO DO:
 
+Header background gradient 
+
 ### Primary
 
 - Light red (CTA text): hsl(356, 100%, 66%)
-- Very light red (CTA hover background): hsl(355, 100%, 74%)
-
-### Gradient
-
-Background gradient - Intro/CTA mobile nav:
-
-- Very light red: hsl(13, 100%, 72%)
-- Light red: hsl(353, 100%, 62%)
+rgba(255, 61, 84) 
 
 Background gradient - infastructure:
 
@@ -25,9 +20,6 @@ Background gradient - infastructure:
 *::after {
   box-sizing: border-box;
 }
-
-/* :root {
-} */
 
 body {
   font: 1rem/1.5 "Overpass", "Ubuntu", sans-serif;
@@ -53,6 +45,13 @@ li {
 a {
   text-decoration: none;
   color: unset;
+  display: block;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .darkblue {
@@ -62,6 +61,35 @@ a {
 /* ====================================
                 HEADER 
  ====================================== */
+
+.header {
+  min-height: 600px;
+  border: 1px solid;
+  border-bottom-left-radius: 120px;
+  background: linear-gradient(to top, hsl(356, 100%, 66%), rgba(255, 143, 112)),
+    url("/images/bg-pattern-intro.svg");
+  background-position: 35% 35%;
+  background-repeat: no-repeat;
+  background-size: 280%;
+  background-blend-mode: soft-light;
+  padding: 3rem 1.8rem 0;
+}
+
+.header__flexsb {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__mobilebg-nav-container {
+  background-color: white;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
 
 /* ====================================
                   MAIN
