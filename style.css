@@ -1,15 +1,12 @@
 /* 
-
 TO DO:
 
-Header background gradient 
-Alignment header navs arrows 
+Header background gradient - inversed colours
+Hero line widths 
 JS - mobile nav logic + hiding/showing nav uls
+ */
 
-
-### Primary
-
-- Light red (CTA text): hsl(356, 100%, 66%)
+/*  
 rgba(255, 61, 84) 
 
 Background gradient - infastructure:
@@ -27,6 +24,15 @@ Background gradient - infastructure:
 body {
   font: 1rem/1.5 "Overpass", "Ubuntu", sans-serif;
   color: hsl(207, 13%, 34%);
+  text-align: center;
+}
+
+.darkblue {
+  color: hsl(208, 49%, 24%);
+}
+
+.white {
+  color: white;
 }
 
 /* ====================================
@@ -57,12 +63,10 @@ button {
   cursor: pointer;
 }
 
-.darkblue {
-  color: hsl(208, 49%, 24%);
-}
-
-.white {
-  color: white;
+a,
+button {
+  transition: 400ms;
+  font-weight: 600;
 }
 
 /* ====================================
@@ -76,7 +80,7 @@ button {
     url("/images/bg-pattern-intro.svg");
   background-position: 35% 35%;
   background-repeat: no-repeat;
-  background-size: 280%;
+  background-size: 300% 200%;
   background-blend-mode: soft-light;
   padding: 3rem 1.8rem 0;
 }
@@ -102,22 +106,16 @@ button {
 }
 
 .header__nav,
-.header__login-signup-container {
+.header__login-signup-container,
+.hero__flex-parent,
+.header__hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .header-nav__btn {
   position: relative;
-}
-
-.header-nav__btn,
-.header-nav__ul a,
-.login,
-.sign-up {
-  font-weight: 600;
 }
 
 .header-nav__btn,
@@ -128,7 +126,6 @@ button {
 
 .arrow::before {
   content: url("./images/icon-arrow-dark.svg");
-  display: inline-block;
   position: absolute;
   top: 50%;
   right: -10px;
@@ -172,49 +169,31 @@ button {
     hsl(356, 100%, 66%),
     rgba(255, 143, 112)
   );
-  transition: 400ms;
 }
 
 .header__hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   max-width: 390px;
   margin: 5rem auto;
 }
 
-.hero__flex-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .hero__title {
+  width: 90%;
+  margin-bottom: 0;
   font-size: 2.5rem;
   line-height: 1.3;
-  margin-bottom: 0;
-  width: 90%;
 }
 
 .hero__description {
+  width: 70%;
+  margin-top: 0.7rem;
   font-weight: 300;
   font-size: 1.1rem;
-  margin-top: 0.7rem;
-  width: 70%;
-}
-
-.hero__btns-container {
-  display: flex;
-  justify-content: space-between;
 }
 
 .btn-start-free,
 .btn-learn-more {
   padding: 1rem 1.8rem;
-  transition: 400ms;
   font-size: 1rem;
-  font-weight: 600;
 }
 
 .btn-start-free {
@@ -229,6 +208,9 @@ button {
 /* ====================================
                   MAIN
  ====================================== */
+
+/* .future-container {
+} */
 
 /* ====================================
                   FOOTER 
@@ -251,12 +233,17 @@ button {
   color: rgba(31, 63, 91);
 }
 
-.sign-up:hover,
-.btn-start-free:hover,
-.btn-learn-more:hover {
+a:hover,
+button:hover {
   transform: scale(1.1);
 }
 
 /* ====================================
               MEDIA QUERIES 
  ====================================== */
+
+@media (min-width: 900px) {
+  .hamburger-hidden {
+    display: none;
+  }
+}
