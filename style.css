@@ -9,11 +9,6 @@ JS - mobile nav logic + hiding/showing nav uls
 
 /*  
 rgba(255, 61, 84) 
-
-Background gradient - infastructure:
-
-- Very dark gray blue: hsl(237, 17%, 21%)
-- Very dark desaturated blue: hsl(237, 23%, 32%)
  */
 
 *,
@@ -78,12 +73,12 @@ button {
   font-size: 2rem;
   font-family: "Ubuntu";
   font-weight: 400;
+  max-width: 22.81rem;
 }
 
 .h3 {
   line-height: 1.2;
   margin-bottom: 0.5rem;
-  max-width: 22.81rem;
 }
 
 /* ====================================
@@ -91,7 +86,7 @@ button {
  ====================================== */
 
 .header {
-  min-height: 600px;
+  min-height: 37.5rem;
   border-bottom-left-radius: 120px;
   background: linear-gradient(to top, hsl(356, 100%, 66%), rgba(255, 143, 112)),
     url("/images/bg-pattern-intro.svg");
@@ -255,19 +250,30 @@ button {
 }
 
 .infastructure-container {
-  outline: 1px solid;
+  min-height: 39.38rem;
+  justify-content: center;
+  position: relative;
   border-bottom-left-radius: 120px;
   border-top-right-radius: 120px;
-  position: relative;
+  background: url("/images/bg-pattern-circles.svg") no-repeat center 330% / 160%,
+    linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%)), center;
 }
 
-/* .infastructure__phones-img {
+.infastructure__phones-img {
   position: absolute;
-} */
+  top: -225px;
+}
 
-/* .phone-flex-child {
-  flex-grow: 1;
-} */
+.infastructure-container section {
+  margin-top: 6rem;
+}
+
+.infastructure__title {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 2.6rem;
+}
+
 /* ====================================
                   FOOTER 
  ====================================== */
