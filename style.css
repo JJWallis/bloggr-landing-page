@@ -2,18 +2,12 @@
 TO DO:
 
 Refactor - class for flex-display 
-Header background gradient + img - inversed colours + color-stops for wide 
 Inconsistent img sizes - convert to background imgs 
 JS - mobile nav logic + hiding/showing nav uls 
 
 Wider: 
 
-NAV bug when mobile active to wider 
-
-Tweakpoint - mid screen: 
-
-Header sb full width 
-Imgs - in flex child to background img 
+Left alignment of phones img - with future txt content
 
  */
 
@@ -269,13 +263,14 @@ button {
   position: relative;
   border-bottom-left-radius: 7.5rem;
   border-top-right-radius: 7.5rem;
-  background: url("/images/bg-pattern-circles.svg") no-repeat center 330% / 160%,
+  background: url("/images/bg-pattern-circles.svg") no-repeat center -320px / 160%,
     linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%)), center;
 }
 
 .infastructure__phones-img {
   position: absolute;
   top: -225px;
+  width: 450px;
 }
 
 .infastructure-container section {
@@ -351,7 +346,7 @@ button:hover {
 }
 
 /* ====================================
-              MEDIA QUERIES 
+          MEDIA QUERIE - MEDIUM/WIDER 
  ====================================== */
 
 @media (min-width: 890px) {
@@ -389,7 +384,7 @@ button:hover {
       url("/images/bg-pattern-intro.svg");
     background-position: 23% 50%;
     background-repeat: no-repeat;
-    background-size: 220% 600%;
+    background-size: 220% 430%;
   }
 
   .header__mobilebg-nav-container,
@@ -498,7 +493,7 @@ button:hover {
   .future-container {
     margin: 5rem 0 0;
     padding-inline: 0.5rem;
-    /* BEWARE OF THIS!! */
+    /*========= BEWARE OF THIS!! ============ */
   }
 
   .future-container section {
@@ -519,12 +514,30 @@ button:hover {
   }
 
   .infastructure-container {
-    min-height: unset;
+    min-height: 25rem;
     padding-block: 3rem;
+    position: static;
+    background: url("/images/bg-pattern-circles.svg") no-repeat -320px -820px /
+        100%,
+      linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%)), center;
   }
 
   .infastructure-container section {
     margin: 0;
+  }
+
+  .infastructure__phones-parent {
+    position: relative;
+  }
+
+  .infastructure__phones-img {
+    top: -110px;
+    left: 0%;
+    width: 470px;
+  }
+
+  .infastructure__title {
+    font-size: 2.4rem;
   }
   /* =============== INTERACTIVE =============== */
 
@@ -536,6 +549,10 @@ button:hover {
     display: none;
   }
 }
+
+/* ====================================
+          MEDIA QUERIE - WIDE 
+ ====================================== */
 
 @media (min-width: 1250px) {
   .header__flexsb {
@@ -551,5 +568,9 @@ button:hover {
 
   .future__swiggle-img {
     display: none;
+  }
+
+  .infastructure__phones-img {
+    top: -140px;
   }
 }

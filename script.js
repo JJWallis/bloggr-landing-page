@@ -5,7 +5,7 @@ const closeBtn = document.querySelector('#close-btn')
 const browserWidth = () => window.innerWidth
  
 header.addEventListener('click', e => {
-    if (browserWidth() < 930) { 
+    if (browserWidth() < 890) { 
         const target = e.target
         if (target.matches('#hamburger') || target.matches('#close-btn') ) {
             nav.classList.toggle('hidden')
@@ -13,4 +13,8 @@ header.addEventListener('click', e => {
             // closeBtn.classList.toggle('hidden')
         }
     }
+})
+
+window.addEventListener('resize', () =>{
+    if (browserWidth() === 889) nav.classList.add('hidden')
 })
