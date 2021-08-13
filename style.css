@@ -1,10 +1,9 @@
 /* 
 TO DO:
 
-Refactor - max-width in rems, min() for width, flex-direction column 
 Header background gradient - inversed colours
 Hero line widths 
-Inconsistent img sizes 
+Inconsistent img sizes - <picture>
 JS - mobile nav logic + hiding/showing nav uls
  */
 
@@ -84,7 +83,7 @@ button {
 .h3 {
   line-height: 1.2;
   margin-bottom: 0.5rem;
-  max-width: 365px;
+  max-width: 22.81rem;
 }
 
 /* ====================================
@@ -129,7 +128,9 @@ button {
 .header__hero-container,
 .future-container,
 .infastructure-container,
-.free-container {
+.free-container,
+.main__flex-parent,
+.main__flex-child {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,7 +194,7 @@ button {
 }
 
 .header__hero-container {
-  max-width: 390px;
+  max-width: 24.38rem;
   margin: 5rem auto;
 }
 
@@ -235,9 +236,6 @@ button {
 }
 
 .future-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 5.5rem 0 17rem;
 }
 
@@ -246,18 +244,8 @@ button {
 }
 
 .main__flex-parent {
-  display: flex;
-  flex-direction: column;
   width: 90%;
-  justify-content: center;
-  align-items: center;
   gap: 1.5rem;
-}
-
-.main__flex-child {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .content-width {
@@ -268,8 +256,18 @@ button {
 
 .infastructure-container {
   outline: 1px solid;
+  border-bottom-left-radius: 120px;
+  border-top-right-radius: 120px;
+  position: relative;
 }
 
+/* .infastructure__phones-img {
+  position: absolute;
+} */
+
+/* .phone-flex-child {
+  flex-grow: 1;
+} */
 /* ====================================
                   FOOTER 
  ====================================== */
