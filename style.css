@@ -3,12 +3,18 @@ TO DO:
 
 Refactor - class for flex-display 
 Header background gradient + img - inversed colours + color-stops for wide 
-Inconsistent img sizes - <picture>
+Inconsistent img sizes - convert to background imgs 
 JS - mobile nav logic + hiding/showing nav uls 
 
 Wider: 
 
 NAV bug when mobile active to wider 
+
+Tweakpoint - mid screen: 
+
+Header sb full width 
+Imgs - in flex child to background img 
+
  */
 
 /*  
@@ -348,7 +354,31 @@ button:hover {
               MEDIA QUERIES 
  ====================================== */
 
-@media (min-width: 930px) {
+@media (min-width: 915px) {
+  body {
+    text-align: left;
+  }
+
+  .h2,
+  .h3 {
+    max-width: unset;
+  }
+
+  .h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+
+  .h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+
+  .h3:nth-child(3) {
+    margin-top: 4rem;
+  }
+
   .header {
     min-height: 35rem;
     background-position: 23% 50%;
@@ -435,6 +465,8 @@ button:hover {
 
   .header__hero-container {
     margin-top: 4rem;
+    width: unset;
+    text-align: center;
   }
 
   .hero__title {
@@ -448,6 +480,42 @@ button:hover {
 
   /* MAIN */
 
+  .main__flex-parent {
+    outline: 2px solid black;
+    max-width: 1100px;
+  }
+
+  .main__flex-child {
+    outline: 2px solid black;
+    align-items: unset;
+  }
+
+  .future-container {
+    margin: 5rem 0 0;
+    background: white url("./images/illustration-editor-desktop.svg") no-repeat;
+    background-position: 155% 0%;
+    background-size: 65% 92%;
+  }
+
+  .future-container section {
+    margin-top: 4.5rem;
+  }
+
+  .future__title {
+    margin: -1rem 0 0;
+  }
+
+  .future__swiggle-child {
+    order: 2;
+  }
+
+  .future__swiggle-img {
+    display: none;
+  }
+
+  .content-width {
+    width: 90%;
+  }
   /* INTERACTIVE */
 
   .hidden {
