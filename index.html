@@ -89,8 +89,12 @@
       <div class="future-container">
         <h2 class="future__title darkblue h2">Designed for the future</h2>
         <section class="main__flex-parent">
-          <aside class="main__flex-child future__swiggle-child"><img src="/images/illustration-editor-mobile.svg" alt="Red, dark-slate blue and white graphic swiggle illustration." class="future__swiggle-img">
-            
+          <aside class="main__flex-child future__swiggle-child">
+            <picture>
+              <source srcset="/images/illustration-editor-desktop.svg"
+                      media="(min-width: 890px)">
+              <img src="/images/illustration-editor-mobile.svg" alt="Red, dark-slate blue and white graphic swiggle illustration." class="future__swiggle-img"/>
+            </picture>
           </aside>
           <article class="main__flex-child">
             <h3 class="h3 darkblue">Introducing an extensible editor</h3>

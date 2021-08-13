@@ -254,7 +254,7 @@ button {
 }
 
 .main__flex-parent > * {
-  flex: 1 1 400px;
+  flex: 1 1 410px;
 }
 
 .content-width {
@@ -354,7 +354,7 @@ button:hover {
               MEDIA QUERIES 
  ====================================== */
 
-@media (min-width: 915px) {
+@media (min-width: 890px) {
   body {
     text-align: left;
   }
@@ -381,14 +381,15 @@ button:hover {
 
   .header {
     min-height: 35rem;
+    background: linear-gradient(
+        300deg,
+        hsl(356, 100%, 66%) 45%,
+        rgba(255, 143, 112) 70%
+      ),
+      url("/images/bg-pattern-intro.svg");
     background-position: 23% 50%;
     background-repeat: no-repeat;
     background-size: 220% 600%;
-  }
-
-  .header__flexsb {
-    width: 80%;
-    margin: 0 auto;
   }
 
   .header__mobilebg-nav-container,
@@ -465,8 +466,8 @@ button:hover {
 
   .header__hero-container {
     margin-top: 4rem;
-    width: unset;
     text-align: center;
+    padding-inline: 2rem;
   }
 
   .hero__title {
@@ -478,23 +479,26 @@ button:hover {
     margin-bottom: 2.5rem;
   }
 
-  /* MAIN */
+  /* ================ MAIN ================= */
 
   .main__flex-parent {
-    outline: 2px solid black;
+    /* outline: 2px solid black; */
     max-width: 1100px;
   }
 
+  .main__flex-parent > * {
+    flex: 1 1 380px;
+  }
+
   .main__flex-child {
-    outline: 2px solid black;
+    /* outline: 2px solid black; */
     align-items: unset;
   }
 
   .future-container {
     margin: 5rem 0 0;
-    background: white url("./images/illustration-editor-desktop.svg") no-repeat;
-    background-position: 155% 0%;
-    background-size: 65% 92%;
+    padding-inline: 0.5rem;
+    /* BEWARE OF THIS!! */
   }
 
   .future-container section {
@@ -507,22 +511,45 @@ button:hover {
 
   .future__swiggle-child {
     order: 2;
-  }
-
-  .future__swiggle-img {
-    display: none;
+    justify-content: center;
   }
 
   .content-width {
     width: 90%;
   }
-  /* INTERACTIVE */
+
+  .infastructure-container {
+    min-height: unset;
+    padding-block: 3rem;
+  }
+
+  .infastructure-container section {
+    margin: 0;
+  }
+  /* =============== INTERACTIVE =============== */
 
   .hidden {
     display: flex;
   }
 
   .hamburger-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1250px) {
+  .header__flexsb {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .future-container {
+    background: white url("./images/illustration-editor-desktop.svg") no-repeat;
+    background-position: 155% 0%;
+    background-size: 65% 92%;
+  }
+
+  .future__swiggle-img {
     display: none;
   }
 }
