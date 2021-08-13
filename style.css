@@ -2,9 +2,9 @@
 TO DO:
 
 Refactor - class for flex-display 
-Header background gradient - inversed colours
+Header background gradient + img - inversed colours + color-stops for wide 
 Inconsistent img sizes - <picture>
-JS - mobile nav logic + hiding/showing nav uls
+JS - mobile nav logic + hiding/showing nav uls 
 
 Wider: 
 
@@ -350,7 +350,7 @@ button:hover {
 
 @media (min-width: 930px) {
   .header {
-    min-height: 20rem;
+    min-height: 35rem;
     background-position: 23% 50%;
     background-repeat: no-repeat;
     background-size: 220% 600%;
@@ -379,7 +379,6 @@ button:hover {
   }
 
   .header-nav__btn {
-    color: white;
     margin-right: 1.5rem;
   }
 
@@ -387,6 +386,8 @@ button:hover {
   .login,
   .sign-up {
     font-size: 1rem;
+    font-weight: 400;
+    color: white;
   }
 
   .arrow {
@@ -395,11 +396,59 @@ button:hover {
 
   .header-nav__ul {
     display: none;
-    width: 50%;
+    width: 180px;
     position: absolute;
-    top: 10px;
+    top: 70px;
     background-color: white;
+    margin: 0;
+    padding: 0.7rem;
   }
+
+  .product-ul {
+    right: 350px;
+  }
+
+  .company-ul {
+    right: 240px;
+  }
+
+  .connect-ul {
+    right: 130px;
+  }
+
+  .header-nav__ul a {
+    padding-block: 0.5rem;
+  }
+
+  .login {
+    margin-left: 1rem;
+  }
+
+  .sign-up {
+    background-image: none;
+    background-color: white;
+    color: hsl(356, 100%, 66%);
+    padding: 1rem 2.5rem;
+    white-space: nowrap;
+    margin-left: 1.7rem;
+  }
+
+  .header__hero-container {
+    margin-top: 4rem;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .hero__description {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* MAIN */
+
+  /* INTERACTIVE */
 
   .hidden {
     display: flex;
