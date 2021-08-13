@@ -5,6 +5,10 @@ Refactor - class for flex-display
 Header background gradient - inversed colours
 Inconsistent img sizes - <picture>
 JS - mobile nav logic + hiding/showing nav uls
+
+Wider: 
+
+NAV bug when mobile active to wider 
  */
 
 /*  
@@ -124,7 +128,6 @@ button {
 .future-container,
 .infastructure-container,
 .free-container,
-.main__flex-parent,
 .main__flex-child {
   display: flex;
   flex-direction: column;
@@ -240,6 +243,12 @@ button {
 .main__flex-parent {
   width: 90%;
   gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__flex-parent > * {
+  flex: 1 1 400px;
 }
 
 .content-width {
@@ -339,7 +348,63 @@ button:hover {
               MEDIA QUERIES 
  ====================================== */
 
-@media (min-width: 900px) {
+@media (min-width: 930px) {
+  .header {
+    min-height: 20rem;
+    background-position: 23% 50%;
+    background-repeat: no-repeat;
+    background-size: 220% 600%;
+  }
+
+  .header__flexsb {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .header__mobilebg-nav-container,
+  .header__nav,
+  .header__login-signup-container {
+    flex-direction: row;
+  }
+
+  .header__mobilebg-nav-container {
+    width: unset;
+    padding: unset;
+    margin-top: unset;
+    position: static;
+    background-color: unset;
+    border-radius: unset;
+    box-shadow: unset;
+    transform: unset;
+  }
+
+  .header-nav__btn {
+    color: white;
+    margin-right: 1.5rem;
+  }
+
+  .header-nav__btn,
+  .login,
+  .sign-up {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    content: url("/images/icon-arrow-light.svg");
+  }
+
+  .header-nav__ul {
+    display: none;
+    width: 50%;
+    position: absolute;
+    top: 10px;
+    background-color: white;
+  }
+
+  .hidden {
+    display: flex;
+  }
+
   .hamburger-hidden {
     display: none;
   }
