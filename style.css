@@ -2,12 +2,13 @@
 TO DO:
 
 Refactor - class for flex-display 
-Inconsistent img sizes - convert to background imgs 
+Inconsistent img sizes - convert to background imgs + px sizing (1000 - REM!) 
 JS - mobile nav logic + hiding/showing nav uls 
 
 Wider: 
 
 Left alignment of phones img - with future txt content
+Exact height + spacing for future + free container 
 
  */
 
@@ -192,7 +193,6 @@ button {
 }
 
 .header__hero-container {
-  width: 90%;
   margin: 5rem auto;
 }
 
@@ -314,13 +314,14 @@ button {
 }
 
 .footer-nav__ul {
-  flex: 1 1 300px;
+  flex: 1 1 200px;
 }
 
 .footer-nav-ul__heading {
-  margin-bottom: 1.5rem;
   color: white;
   font-size: 1.1rem;
+  padding-block: 1.7rem;
+  display: block;
 }
 
 .footer-nav__ul a {
@@ -503,9 +504,12 @@ button:hover {
   .future__title {
     margin: -1rem 0 0;
   }
-
   .future__swiggle-child {
     order: 2;
+  }
+
+  .future__swiggle-child,
+  .free__laptop-img-container {
     justify-content: center;
   }
 
@@ -539,6 +543,26 @@ button:hover {
   .infastructure__title {
     font-size: 2.4rem;
   }
+
+  .free-container {
+    margin: 8rem 0 0;
+    padding: 8rem 0 17rem;
+  }
+
+  .free-container section {
+    margin-top: 2.7rem;
+  }
+
+  .footer-nav__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 2rem;
+  }
+
   /* =============== INTERACTIVE =============== */
 
   .hidden {
@@ -566,11 +590,18 @@ button:hover {
     background-size: 65% 92%;
   }
 
-  .future__swiggle-img {
+  .future__swiggle-img,
+  .free__laptop-img {
     display: none;
   }
 
   .infastructure__phones-img {
     top: -140px;
+  }
+
+  .free-container {
+    background: white url("./images/illustration-laptop-desktop.svg") no-repeat;
+    background-position: -96% 0%;
+    background-size: 75% 88%;
   }
 }

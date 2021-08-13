@@ -127,9 +127,12 @@
 
       <div class="free-container">
         <section class="main__flex-parent">
-          <aside class="main__flex-child">
-            <img src="/images/illustration-laptop-mobile.svg" alt="Red, dark-slate blue and white graphic swiggle illustration." class="free__laptop-img">
-            <!-- <picture> for diff img displays -->
+          <aside class="main__flex-child free__laptop-img-container">
+            <picture>
+              <source srcset="/images/illustration-laptop-desktop.svg"
+                      media="(min-width: 890px)">
+              <img src="/images/illustration-laptop-mobile.svg" alt="Candy red, slate grey and white virtual laptop with Blogr mockup design shown." class="free__laptop-img"/>
+            </picture>
           </aside>
           <article class="main__flex-child">
             <h3 class="h3 darkblue free-open-subtitle">Free, open, simple</h3>
@@ -154,10 +157,8 @@
 
       <nav class="footer__nav">
         <ul class="footer-nav__ul">
-          <li class="footer-nav-ul__heading">
-            <strong>Product</strong>
-          </li>
           <li>
+            <strong class="footer-nav-ul__heading">Product</strong>
             <a href="/">Overview</a>
             <a href="/">Pricing</a>
             <a href="/">Marketplace</a>
@@ -167,10 +168,8 @@
         </ul>
 
         <ul class="footer-nav__ul">
-          <li class="footer-nav-ul__heading">
-            <strong>Company</strong>
-          </li>
           <li>
+            <strong class="footer-nav-ul__heading">Company</strong>
             <a href="/">About</a>
             <a href="/">Team</a>
             <a href="/">Blog</a>
@@ -179,10 +178,8 @@
         </ul>
 
         <ul class="footer-nav__ul">
-          <li class="footer-nav-ul__heading">
-            <strong>Connect</strong>
-          </li>
           <li>
+            <strong class="footer-nav-ul__heading">Connect</strong>
             <a href="/">Contact</a>
             <a href="/">Newsletter</a>
             <a href="/">LinkedIn</a>
