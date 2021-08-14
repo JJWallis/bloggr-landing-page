@@ -1,9 +1,10 @@
 /* 
 TO DO:
 
-Refactor - class for flex-display | REMS for px 
-Inconsistent img sizes - convert to background imgs + px sizing (1000px - REM!) 
+Inconsistent img sizes 
 JS - mobile nav logic + hiding/showing nav uls + bug when to wider 
+Refactor - class for flex-display | REMS for px 
+Feature queries for clamp() 
 
 Wider: 
 
@@ -72,7 +73,7 @@ button {
 
 .h2,
 .h3 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 6vw, 2.5rem);
   font-family: "Ubuntu";
   font-weight: 400;
   max-width: 22.81rem;
@@ -235,6 +236,7 @@ button {
 
 .future__title {
   margin: 0 0 3rem;
+  max-width: unset;
 }
 
 .main__flex-parent {
@@ -252,6 +254,7 @@ button {
   width: 85%;
   line-height: 1.8;
   font-weight: 300;
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .infastructure-container {
@@ -342,6 +345,16 @@ a:hover,
 button:hover {
   transform: scale(1.1);
 }
+
+/* ====================================
+            FEATURE QUERIE
+ ====================================== */
+
+/* @supports (font-size: clamp()) {
+  .content-width {
+    font-size: clamp(1rem, 6vw, 1.5rem);
+  }
+} */
 
 /* ====================================
           MEDIA QUERIE - MEDIUM/WIDER 
@@ -517,6 +530,7 @@ button:hover {
 
   .content-width {
     width: 90%;
+    font-size: unset;
   }
 
   .infastructure-container {
