@@ -1,6 +1,7 @@
 /* 
 TO DO:
 
+Position absolute hero section + left + top: 50%, translate(-50px, -50px) for perfect centering
 Inconsistent img sizes 
 JS - mobile nav logic + hiding/showing nav uls + bug when to wider 
 Refactor - class for flex-display | REMS for px 
@@ -102,6 +103,7 @@ button {
   background-size: 300% 200%;
   background-blend-mode: soft-light;
   padding: 3rem 1.8rem 0;
+  position: relative;
 }
 
 .header__flexsb {
@@ -195,7 +197,11 @@ button {
 }
 
 .header__hero-container {
-  margin: 5rem auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
 }
 
 .hero__title {
@@ -475,9 +481,7 @@ button:hover {
   }
 
   .header__hero-container {
-    margin-top: 4rem;
     text-align: center;
-    padding-inline: 2rem;
   }
 
   .hero__title {
