@@ -4,7 +4,6 @@ TO DO:
 Wider: 
 
 White arrows
-Overlapping when multiple visible 
 Max-width of future + free containers - but not on infastructure (stop wide spacing with background imgs) 
 
 Refactor:
@@ -608,6 +607,10 @@ a:hover,
 
   .wide-hidden {
     display: none;
+  }
+
+  .header-nav__ul a:hover {
+    text-decoration: none;
   }
 }
 

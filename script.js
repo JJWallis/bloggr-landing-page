@@ -18,15 +18,23 @@ header.addEventListener('click', e => {
         const ul = target.nextElementSibling
         const arrow = target.firstElementChild
         const navLists = document.querySelectorAll('.header-nav__ul')
+        const arrows = document.querySelectorAll('.arrow')
 
         if (!ul.classList.contains('hamburger-hidden')) {
             ul.classList.add('hamburger-hidden')
+            arrow.classList.remove('rotate')
         } else {
             for (let list of navLists) {
                 list.classList.add('hamburger-hidden')
+            }
+            for (let arrow of arrows) {
+                arrow.classList.remove('rotate')
             }
                 ul.classList.toggle('hamburger-hidden')
                 arrow.classList.toggle('rotate')
         }
     }
 })
+
+// fix arrow rotation - loop over all arrow imgs + 
+// remove rotate class (reset - same as nav )
