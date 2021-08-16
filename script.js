@@ -15,9 +15,18 @@ header.addEventListener('click', e => {
     } 
 
     if (target.matches('.header-nav__btn')) {
-        const nextSibling = target.nextElementSibling
+        const ul = target.nextElementSibling
         const arrow = target.firstElementChild
-        nextSibling.classList.toggle('hamburger-hidden')
-        arrow.classList.toggle('rotate')
+        const navLists = document.querySelectorAll('.header-nav__ul')
+
+        if (!ul.classList.contains('hamburger-hidden')) {
+            ul.classList.add('hamburger-hidden')
+        } else {
+            for (let list of navLists) {
+                list.classList.add('hamburger-hidden')
+            }
+                ul.classList.toggle('hamburger-hidden')
+                arrow.classList.toggle('rotate')
+        }
     }
 })

@@ -1,14 +1,15 @@
 /* 
 TO DO:
 
-JS - mobile nav logic + hiding/showing nav uls + bug when to wider 
-
 Wider: 
 
+White arrows
+Overlapping when multiple visible 
 Max-width of future + free containers - but not on infastructure (stop wide spacing with background imgs) 
 
 Refactor:
 
+Update class names for hidden els 
 Class for flex-display | REMS for px 
 Feature queries for clamp() 
  */
@@ -476,7 +477,7 @@ a:hover,
   }
 
   .header-nav__ul a {
-    padding-block: 0.5rem;
+    padding: 0.7rem 2.5rem 0.5rem 1rem;
   }
 
   .login {
