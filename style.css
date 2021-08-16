@@ -140,6 +140,7 @@ button {
 
 .header-nav__btn {
   position: relative;
+  margin-bottom: 2rem;
 }
 
 .header-nav__btn,
@@ -148,8 +149,7 @@ button {
   font-size: 1.2rem;
 }
 
-.arrow::before {
-  content: url("./images/icon-arrow-dark.svg");
+.arrow {
   position: absolute;
   top: 50%;
   right: -10px;
@@ -159,7 +159,7 @@ button {
 
 .header-nav__ul {
   width: 90%;
-  margin-block: 1.1rem;
+  margin-bottom: 1.3rem;
   padding-block: 0.5rem;
   background-color: rgba(200, 200, 203, 0.3);
   border-radius: 5px;
@@ -343,8 +343,14 @@ button {
               INTERACTIVE / STATE
  ====================================== */
 
-.hidden {
+.hamburger-hidden {
   display: none;
+}
+
+.rotate {
+  top: 15%;
+  right: -10px;
+  transform: rotate(180deg) translateY(-50%);
 }
 
 .header-nav__ul a:hover {
@@ -437,7 +443,7 @@ a:hover,
   }
 
   .header-nav__btn {
-    margin-right: 1.5rem;
+    margin: 0 1.5rem 0 0;
   }
 
   .header-nav__btn,
@@ -448,12 +454,7 @@ a:hover,
     color: white;
   }
 
-  .arrow {
-    content: url("/images/icon-arrow-light.svg");
-  }
-
   .header-nav__ul {
-    display: none;
     width: 180px;
     position: absolute;
     top: 70px;
@@ -604,7 +605,7 @@ a:hover,
     display: flex;
   }
 
-  .hamburger-hidden {
+  .wide-hidden {
     display: none;
   }
 }

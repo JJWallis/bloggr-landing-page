@@ -5,16 +5,19 @@ const closeBtn = document.querySelector('#close-btn')
 const browserWidth = () => window.innerWidth
  
 header.addEventListener('click', e => {
+    const target = e.target
     if (browserWidth() < 890) { 
-        const target = e.target
         if (target.matches('#hamburger') || target.matches('#close-btn') ) {
-            nav.classList.toggle('hidden')
+            nav.classList.toggle('hamburger-hidden')
             // hamburgerBtn.classList.toggle('hidden')
             // closeBtn.classList.toggle('hidden')
         }
-    }
-})
+    } 
 
-window.addEventListener('resize', () =>{
-    if (browserWidth() === 889) nav.classList.add('hidden')
+    if (target.matches('.header-nav__btn')) {
+        const nextSibling = target.nextElementSibling
+        const arrow = target.firstElementChild
+        nextSibling.classList.toggle('hamburger-hidden')
+        arrow.classList.toggle('rotate')
+    }
 })
