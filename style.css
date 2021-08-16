@@ -1,16 +1,16 @@
 /* 
 TO DO:
 
-Position absolute hero section + left + top: 50%, translate(-50px, -50px) for perfect centering
-Inconsistent img sizes 
 JS - mobile nav logic + hiding/showing nav uls + bug when to wider 
-Refactor - class for flex-display | REMS for px 
-Feature queries for clamp() 
 
 Wider: 
 
-Left alignment of phones img - with future txt content + when infastructure heading wraps 
-Exact height + spacing for future + free container 
+Max-width of future + free containers - but not on infastructure (stop wide spacing with background imgs) 
+
+Refactor:
+
+Class for flex-display | REMS for px 
+Feature queries for clamp() 
 
 rgba(255, 61, 84) 
  */
@@ -118,6 +118,7 @@ button {
   padding: 2rem 1rem;
   margin-top: 1rem;
   position: absolute;
+  z-index: 2;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
@@ -155,6 +156,7 @@ button {
   top: 50%;
   right: -10px;
   transform: translateY(-50%);
+  z-index: 2;
 }
 
 .header-nav__ul {
@@ -516,8 +518,8 @@ button:hover {
     margin: 0;
     padding: 7rem 0.5rem; /*========= BEWARE OF THIS!! ============ */
     background: white url("./images/illustration-editor-desktop.svg") no-repeat;
-    background-position: 320% 60%;
-    background-size: 85% 80%;
+    background-position: calc(100% + 270px) 60%;
+    background-size: 700px;
   }
 
   .future-container section {
@@ -525,7 +527,7 @@ button:hover {
   }
 
   .future__title {
-    margin: -3rem 0 0;
+    margin-bottom: 3rem;
   }
   .future__swiggle-child {
     order: 2;
@@ -569,8 +571,8 @@ button:hover {
     margin: 0;
     padding: 7rem 0.5rem;
     background: white url("./images/illustration-laptop-desktop.svg") no-repeat;
-    background-position: -200% 60%;
-    background-size: 85% 80%;
+    background-position: calc(0% - 230px) 60%;
+    background-size: 700px;
   }
 
   .free-container section {
@@ -608,15 +610,20 @@ button:hover {
     margin: 0 auto;
   }
 
+  .future-container,
+  .free-container {
+    margin: 2rem 0 5rem;
+  }
+
   .future-container {
     background: white url("./images/illustration-editor-desktop.svg") no-repeat;
-    background-position: 155% 0%;
-    background-size: 65% 92%;
+    background-position: calc(100% + 300px) 100%;
+    background-size: 850px;
   }
 
   .free-container {
     background: white url("./images/illustration-laptop-desktop.svg") no-repeat;
-    background-position: -96% 0%;
-    background-size: 75% 88%;
+    background-position: calc(0% - 245px) 100%;
+    background-size: 850px;
   }
 }
