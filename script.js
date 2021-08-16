@@ -36,5 +36,20 @@ header.addEventListener('click', e => {
     }
 })
 
-// fix arrow rotation - loop over all arrow imgs + 
-// remove rotate class (reset - same as nav )
+function whiteArrows() {
+    const lightArrow = './images/icon-arrow-light.svg'
+    const darkArrow = './images/icon-arrow-dark.svg'
+    const arrows = document.querySelectorAll('.arrow')
+
+    for (let arrow of arrows) { // could be more efficient - check before loop runs 
+        if (browserWidth() >= 890) {
+            arrow.src = lightArrow
+        } else {
+            arrow.src = darkArrow
+        }
+    }
+}
+
+whiteArrows()
+
+window.addEventListener('resize', whiteArrows) 
