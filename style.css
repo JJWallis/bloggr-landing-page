@@ -3,12 +3,11 @@ TO DO:
 
 Mobile: 
 
+Header - hero wrapping 
 Background imgs vs in flex (how to get blank flex item vertically)
-Footer nav never goes into col - change basis 
 
 Wider: 
 
-Too much space above future title for medium size
 Increase media breakpoint further
 Max-width of future + free containers - but not on infastructure (stop wide spacing with background imgs) 
 Change header gradient img on v.wide screens too - not too stretched
@@ -18,7 +17,7 @@ Refactor:
 Update class names for hidden els 
 Class for flex-display | REMS for px 
 Feature queries for clamp() 
-JS
+JS - animate opening/closing nav 
  */
 
 *,
@@ -332,7 +331,7 @@ button {
 }
 
 .footer-nav__ul {
-  flex: 1 1 200px;
+  flex: 1 1 230px;
 }
 
 .footer-nav-ul__heading {
@@ -472,11 +471,11 @@ a:hover,
   }
 
   .product-ul {
-    right: 350px;
+    right: 320px;
   }
 
   .company-ul {
-    right: 240px;
+    right: 230px;
   }
 
   .connect-ul {
@@ -534,9 +533,9 @@ a:hover,
 
   .future-container {
     margin: 0;
-    padding: 7rem 0.5rem; /*========= BEWARE OF THIS!! ============ */
+    padding: 5.5rem 0.5rem 7rem;
     background: white url("./images/illustration-editor-desktop.svg") no-repeat;
-    background-position: calc(100% + 270px) 60%;
+    background-position: calc(100% + 240px) 60%;
     background-size: 700px;
   }
 
@@ -544,9 +543,6 @@ a:hover,
     margin-top: 4.5rem;
   }
 
-  .future__title {
-    margin-bottom: 3rem;
-  }
   .future__swiggle-child {
     order: 2;
   }
@@ -589,7 +585,7 @@ a:hover,
     margin: 0;
     padding: 7rem 0.5rem;
     background: white url("./images/illustration-laptop-desktop.svg") no-repeat;
-    background-position: calc(0% - 230px) 60%;
+    background-position: calc(0% - 200px) 60%;
     background-size: 700px;
   }
 
@@ -619,6 +615,7 @@ a:hover,
 
   .header-nav__ul a:hover {
     text-decoration: none;
+    color: hsl(237, 17%, 21%);
   }
 }
 
@@ -637,13 +634,18 @@ a:hover,
     margin: 2rem 0 5rem;
   }
 
+  .future__title {
+    margin-top: -2rem;
+  }
+
   .future-container {
     background: white url("./images/illustration-editor-desktop.svg") no-repeat;
-    background-position: calc(100% + 300px) 100%;
+    background-position: calc(100% + 290px) 100%;
     background-size: 850px;
   }
 
   .free-container {
+    padding-top: 9rem;
     background: white url("./images/illustration-laptop-desktop.svg") no-repeat;
     background-position: calc(0% - 245px) 100%;
     background-size: 850px;
