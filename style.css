@@ -1,8 +1,15 @@
 /* 
 TO DO:
 
+Mobile: 
+
+Background imgs vs in flex (how to get blank flex item vertically)
+Footer nav never goes into col - change basis 
+
 Wider: 
 
+Too much space above future title for medium size
+Increase media breakpoint further
 Max-width of future + free containers - but not on infastructure (stop wide spacing with background imgs) 
 Change header gradient img on v.wide screens too - not too stretched
 
