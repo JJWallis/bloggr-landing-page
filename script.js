@@ -1,25 +1,26 @@
 const header = document.querySelector('.header')
 const nav = document.querySelector('#mobile-nav')
 const hamburgerBtn = document.querySelector('#hamburger')
-const closeBtn = document.querySelector('#close-btn')
+const hamburgerPath = hamburgerBtn.src
+const closeBtn = './images/icon-close.svg'
+const navLists = document.querySelectorAll('.header-nav__ul')
+const arrows = document.querySelectorAll('.arrow')
 const browserWidth = () => window.innerWidth
  
 header.addEventListener('click', e => {
     const target = e.target
+    const ul = target.nextElementSibling
+    const arrow = target.firstElementChild
+
     if (browserWidth() < 890) { 
         if (target.matches('#hamburger') || target.matches('#close-btn') ) {
             nav.classList.toggle('hamburger-hidden')
-            // hamburgerBtn.classList.toggle('hidden')
-            // closeBtn.classList.toggle('hidden')
+            hamburgerBtn.src = hamburgerBtn.src.includes('close') ? 
+                hamburgerBtn.src = hamburgerPath : hamburgerBtn.src = closeBtn
         }
     } 
 
     if (target.matches('.header-nav__btn')) {
-        const ul = target.nextElementSibling
-        const arrow = target.firstElementChild
-        const navLists = document.querySelectorAll('.header-nav__ul')
-        const arrows = document.querySelectorAll('.arrow')
-
         if (!ul.classList.contains('hamburger-hidden')) {
             ul.classList.add('hamburger-hidden')
             arrow.classList.remove('rotate')
