@@ -1,56 +1,51 @@
-const header = document.querySelector('.header')
-const nav = document.querySelector('#mobile-nav')
-const hamburgerBtn = document.querySelector('#hamburger')
-const hamburgerPath = hamburgerBtn.src
-const closeBtn = './images/icon-close.svg'
-const navLists = document.querySelectorAll('.header-nav__ul')
-const arrows = document.querySelectorAll('.arrow')
+const domSelect = el => document.querySelector(el)
+const domSelectAll = el => document.querySelectorAll(el)
+const header = domSelect('.header')
+const nav = domSelect('#mobile-nav')
+const hamburgerBtn = domSelect('#hamburger')
+const arrows = domSelectAll('.arrow')
 const browserWidth = () => window.innerWidth
+const paths = { 
+    hamburgerBtnPath: './images/icon-hamburger.svg',
+    closeBtnPath: './images/icon-close.svg',
+    lightArrow: './images/icon-arrow-light.svg',
+    darkArrow: './images/icon-arrow-dark.svg'
+ }
  
 header.addEventListener('click', e => {
     const target = e.target
-    const ul = target.nextElementSibling
+    const navList = target.nextElementSibling
     const arrow = target.firstElementChild
 
     if (browserWidth() < 1000) { 
-        if (target.matches('#hamburger') || target.matches('#close-btn') ) {
+        if (target.matches('#hamburger') || target.matches('#close-btn')) {
+            const src = {
+                normal() { hamburgerBtn.src = paths.hamburgerBtnPath },
+                close() { hamburgerBtn.src = paths.closeBtnPath }
+            }
             nav.classList.toggle('hamburger-hidden')
-            hamburgerBtn.src = hamburgerBtn.src.includes('close') ? 
-                hamburgerBtn.src = hamburgerPath : hamburgerBtn.src = closeBtn
+            let btnType = hamburgerBtn.src.includes('close') ? 'normal' : 'close'
+            src[btnType]()
         }
     } 
 
     if (target.matches('.header-nav__btn')) {
-        if (!ul.classList.contains('hamburger-hidden')) {
-            ul.classList.add('hamburger-hidden')
+        if (!navList.classList.contains('hamburger-hidden')) {
+            navList.classList.add('hamburger-hidden')
             arrow.classList.remove('rotate')
         } else {
-            for (let list of navLists) {
-                list.classList.add('hamburger-hidden')
-            }
-            for (let arrow of arrows) {
-                arrow.classList.remove('rotate')
-            }
-                ul.classList.toggle('hamburger-hidden')
-                arrow.classList.toggle('rotate')
+            const navLists = domSelectAll('.header-nav__ul')
+            for (const list of navLists) list.classList.add('hamburger-hidden')
+            for (const arrow of arrows) arrow.classList.remove('rotate')
+            navList.classList.toggle('hamburger-hidden')
+            arrow.classList.toggle('rotate')
         }
     }
 })
 
-function whiteArrows() {
-    const lightArrow = './images/icon-arrow-light.svg'
-    const darkArrow = './images/icon-arrow-dark.svg'
-    const arrows = document.querySelectorAll('.arrow')
-
-    for (let arrow of arrows) { // could be more efficient - check before loop runs 
-        if (browserWidth() >= 1000) {
-            arrow.src = lightArrow
-        } else {
-            arrow.src = darkArrow
-        }
-    }
+function createWhiteArrows() {
+    for (const arrow of arrows) arrow.src = browserWidth() >= 1000 ? paths.lightArrow : paths.darkArrow
 }
 
-whiteArrows()
-
-window.addEventListener('resize', whiteArrows) 
+createWhiteArrows()
+window.addEventListener('resize', createWhiteArrows) 

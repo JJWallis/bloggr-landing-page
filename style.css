@@ -4,7 +4,7 @@ TO DO:
 Wider: 
 
 Max-width of future + free containers - but not on infastructure (stop wide spacing with background imgs) 
-Change header gradient img on v.wide screens too - not too stretched
+Change header gradient img on v.wide screens too - not too stretched | space-between happens at ultra-wide viewport
 
 Refactor:
 
@@ -113,7 +113,7 @@ button {
 }
 
 .header__mobilebg-nav-container {
-  width: min(100%, 600px);
+  width: 100%;
   padding: 2rem 1rem;
   margin-top: 1rem;
   position: absolute;
@@ -203,7 +203,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
+  width: 75%;
 }
 
 .hero__title {
