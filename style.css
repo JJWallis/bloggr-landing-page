@@ -1,14 +1,8 @@
 /* 
 TO DO:
 
-Mobile: 
-
-Header - hero wrapping 
-Background imgs vs in flex (how to get blank flex item vertically)
-
 Wider: 
 
-Increase media breakpoint further
 Max-width of future + free containers - but not on infastructure (stop wide spacing with background imgs) 
 Change header gradient img on v.wide screens too - not too stretched
 
@@ -119,7 +113,7 @@ button {
 }
 
 .header__mobilebg-nav-container {
-  width: 100%;
+  width: min(100%, 600px);
   padding: 2rem 1rem;
   margin-top: 1rem;
   position: absolute;
@@ -182,6 +176,7 @@ button {
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
 }
 
 .login {
@@ -208,7 +203,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
+  width: 85%;
 }
 
 .hero__title {
@@ -260,11 +255,11 @@ button {
   width: 90%;
   gap: 1.5rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .main__flex-parent > * {
-  flex: 1 1 410px;
+  flex: 1 1 100%;
 }
 
 .content-width {
@@ -275,13 +270,17 @@ button {
 }
 
 .infastructure-container {
-  min-height: 39.38rem;
   justify-content: center;
   position: relative;
+  padding-bottom: 1rem;
   border-bottom-left-radius: 7.5rem;
   border-top-right-radius: 7.5rem;
   background: url("/images/bg-pattern-circles.svg") no-repeat center -320px / 160%,
     linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%)), center;
+}
+
+.infastructure__phones-parent {
+  min-height: 3.5rem;
 }
 
 .infastructure__phones-img {
@@ -394,7 +393,7 @@ a:hover,
           MEDIA QUERIE - MEDIUM/WIDER 
  ====================================== */
 
-@media (min-width: 890px) {
+@media (min-width: 1000px) {
   body {
     text-align: left;
   }
@@ -515,11 +514,8 @@ a:hover,
   /* ================ MAIN ================= */
 
   .main__flex-parent {
+    flex-direction: row;
     max-width: 1100px;
-  }
-
-  .main__flex-parent > * {
-    flex: 1 1 380px;
   }
 
   .main__flex-child {
@@ -571,7 +567,7 @@ a:hover,
   }
 
   .infastructure__phones-img {
-    top: -155px;
+    top: -165px;
     left: 0%;
     width: 470px;
   }

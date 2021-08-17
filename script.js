@@ -12,7 +12,7 @@ header.addEventListener('click', e => {
     const ul = target.nextElementSibling
     const arrow = target.firstElementChild
 
-    if (browserWidth() < 890) { 
+    if (browserWidth() < 1000) { 
         if (target.matches('#hamburger') || target.matches('#close-btn') ) {
             nav.classList.toggle('hamburger-hidden')
             hamburgerBtn.src = hamburgerBtn.src.includes('close') ? 
@@ -43,7 +43,7 @@ function whiteArrows() {
     const arrows = document.querySelectorAll('.arrow')
 
     for (let arrow of arrows) { // could be more efficient - check before loop runs 
-        if (browserWidth() >= 890) {
+        if (browserWidth() >= 1000) {
             arrow.src = lightArrow
         } else {
             arrow.src = darkArrow
