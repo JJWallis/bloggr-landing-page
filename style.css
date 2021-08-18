@@ -1,17 +1,11 @@
 /* 
 TO DO:
 
-Wider: 
-
-Max-width of future + free containers - but not on infastructure (stop wide spacing with background imgs) 
-Change header gradient img on v.wide screens too - not too stretched | space-between happens at ultra-wide viewport
-
-Refactor:
+JS - animate opening/closing nav 
 
 Update class names for hidden els 
 Class for flex-display | REMS for px 
 Feature queries for clamp() 
-JS - animate opening/closing nav 
  */
 
 *,
@@ -203,7 +197,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
+  width: 70%;
 }
 
 .hero__title {
@@ -549,8 +543,8 @@ a:hover,
   }
 
   .content-width {
-    width: 90%;
-    font-size: unset;
+    width: 100%;
+    font-size: clamp(1rem, 3vw, 1.3rem);
   }
 
   .infastructure-container {
@@ -567,9 +561,9 @@ a:hover,
   }
 
   .infastructure__phones-img {
-    top: -165px;
-    left: 0%;
-    width: 470px;
+    top: -177px;
+    right: 8%;
+    width: 600px;
   }
 
   .infastructure__title {
@@ -581,8 +575,8 @@ a:hover,
     margin: 0;
     padding: 7rem 0.5rem;
     background: white url("./images/illustration-laptop-desktop.svg") no-repeat;
-    background-position: calc(0% - 200px) 60%;
-    background-size: 700px;
+    background-position: calc(0% - 250px) 60%;
+    background-size: 800px;
   }
 
   .free-container section {
@@ -619,31 +613,74 @@ a:hover,
           MEDIA QUERIE - WIDE 
  ====================================== */
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header {
+    background-position: 23% 50%;
+    background-size: 100%;
+  }
+
   .header__flexsb {
     width: 80%;
     margin: 0 auto;
   }
 
-  .future-container,
-  .free-container {
-    margin: 2rem 0 5rem;
+  .future-container {
+    margin: 3rem 0 11rem;
+  }
+
+  .free-container,
+  .future-container {
+    background: unset;
   }
 
   .future__title {
     margin-top: -2rem;
   }
 
-  .future-container {
-    background: white url("./images/illustration-editor-desktop.svg") no-repeat;
-    background-position: calc(100% + 290px) 100%;
-    background-size: 850px;
+  .future__flex-parent,
+  .free__flex-parent {
+    position: relative;
+  }
+
+  .future__flex-parent::before {
+    content: url("./images/illustration-editor-desktop.svg");
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .free-container {
-    padding-top: 9rem;
-    background: white url("./images/illustration-laptop-desktop.svg") no-repeat;
-    background-position: calc(0% - 245px) 100%;
-    background-size: 850px;
+    margin: 11rem 0 10rem;
+  }
+
+  .free__flex-parent::before {
+    content: url("./images/illustration-laptop-desktop.svg");
+    position: absolute;
+    right: 57%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .footer {
+    position: relative;
+  }
+
+  .footer-logo {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    margin-left: 13px;
+  }
+
+  .footer__nav {
+    margin: 3rem auto 0;
+    max-width: 1000px;
   }
 }

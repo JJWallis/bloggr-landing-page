@@ -7,7 +7,7 @@ const arrows = domSelectAll('.arrow')
 const browserWidth = () => window.innerWidth
 const paths = { 
     hamburgerBtnPath: './images/icon-hamburger.svg',
-    closeBtnPath: './images/icon-close.svg',
+    closeBtnPath: './images/icon-close.svg', 
     lightArrow: './images/icon-arrow-light.svg',
     darkArrow: './images/icon-arrow-dark.svg'
  }
