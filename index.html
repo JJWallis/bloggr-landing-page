@@ -1,203 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>[Blogr]</title>
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="/normalise.css" type="text/css" />
+      <link rel="stylesheet" href="/style.css" type="text/css" />
+      <script defer src="/script.js"></script>
+   </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Blogr]</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,600;1,300;1,600&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/normalise.css" type="text/css">
-  <link rel="stylesheet" href="/style.css" type="text/css">
-  <script defer src="/script.js"></script>
-</head>
+   <body>
+      <header class="header">
+         <div class="header__flexsb">
+            <a
+               href="/"
+               aria-label="Interactive Blogr logo, directing to homepage."
+               ><img
+                  src="/images/logo.svg"
+                  alt="Blogr landing-page text logo."
+                  class="logo"
+            /></a>
+            <button class="hamburger-btn wide-hidden">
+               <img
+                  src="/images/icon-hamburger.svg"
+                  alt="Interactive mobile hamburger icon."
+                  class="hamburger-icon"
+                  id="hamburger"
+               />
+            </button>
+            <div
+               class="header__mobilebg-nav-container hidden hamburger-hidden"
+               id="mobile-nav"
+            >
+               <nav class="header__nav">
+                  <button
+                     id="btn-product"
+                     class="header-nav__btn darkblue"
+                     type="button"
+                  >
+                     Product
+                     <img src="/images/icon-arrow-dark.svg" class="arrow" />
+                  </button>
+                  <ul class="header-nav__ul product-ul hamburger-hidden">
+                     <li>
+                        <a href="/">Overview</a>
+                        <a href="/">Pricing</a>
+                        <a href="/">Marketplace</a>
+                        <a href="/">Features</a>
+                        <a href="/">Integrations</a>
+                     </li>
+                  </ul>
+                  <button
+                     id="btn-company"
+                     class="header-nav__btn darkblue"
+                     type="button"
+                  >
+                     Company
+                     <img src="/images/icon-arrow-dark.svg" class="arrow" />
+                  </button>
+                  <ul class="header-nav__ul company-ul hamburger-hidden">
+                     <li>
+                        <a href="/">About</a>
+                        <a href="/">Team</a>
+                        <a href="/">Blog</a>
+                        <a href="/">Careers</a>
+                     </li>
+                  </ul>
+                  <button
+                     id="btn-connect"
+                     class="header-nav__btn darkblue"
+                     type="button"
+                  >
+                     Connect
+                     <img src="/images/icon-arrow-dark.svg" class="arrow" />
+                  </button>
+                  <ul class="header-nav__ul connect-ul hamburger-hidden">
+                     <li>
+                        <a href="/">Contact</a>
+                        <a href="/">Newsletter</a>
+                        <a href="/">LinkedIn</a>
+                     </li>
+                  </ul>
+               </nav>
 
-<body>
+               <hr class="hr wide-hidden" />
 
+               <div class="header__login-signup-container">
+                  <a href="/" class="login darkblue">Login</a>
+                  <button class="sign-up header-btn-white header-btn">
+                     Sign Up
+                  </button>
+               </div>
+            </div>
+         </div>
 
-  <header class="header">
-    <div class="header__flexsb">
-      <a href="/" aria-label="Interactive Blogr logo, directing to homepage."><img src="/images/logo.svg"
-          alt="Blogr landing-page text logo." class="logo"></a>
-      <button class="hamburger-btn wide-hidden">
-        <img src="/images/icon-hamburger.svg" alt="Interactive mobile hamburger icon." class="hamburger-icon"
-          id="hamburger">
-      </button>
-      <div class="header__mobilebg-nav-container hidden hamburger-hidden" id="mobile-nav">
-        <nav class="header__nav">
-          <button id="btn-product" class="header-nav__btn darkblue" type="button">
-            Product
-            <img src="/images/icon-arrow-dark.svg" class="arrow">
-          </button>
-          <ul class="header-nav__ul product-ul hamburger-hidden">
-            <li>
-              <a href="/">Overview</a>
-              <a href="/">Pricing</a>
-              <a href="/">Marketplace</a>
-              <a href="/">Features</a>
-              <a href="/">Integrations</a>
-            </li>
-          </ul>
-          <button id="btn-company" class="header-nav__btn darkblue" type="button">
-            Company
-            <img src="/images/icon-arrow-dark.svg" class="arrow">
-          </button>
-          <ul class="header-nav__ul company-ul hamburger-hidden">
-            <li>
-              <a href="/">About</a>
-              <a href="/">Team</a>
-              <a href="/">Blog</a>
-              <a href="/">Careers</a>
-            </li>
-          </ul>
-          <button id="btn-connect" class="header-nav__btn darkblue" type="button">
-            Connect
-            <img src="/images/icon-arrow-dark.svg" class="arrow">
-          </button>
-          <ul class="header-nav__ul connect-ul hamburger-hidden">
-            <li>
-              <a href="/">Contact</a>
-              <a href="/">Newsletter</a>
-              <a href="/">LinkedIn</a>
-            </li>
-          </ul>
-        </nav>
+         <div class="header__hero-container">
+            <section class="hero__flex-parent">
+               <h1 class="hero__title white">A modern publishing platform</h1>
+               <h4 class="hero__description white">
+                  Grow your audience and build your online brand
+               </h4>
+               <div class="hero__btns-container">
+                  <button class="btn-start-free header-btn-white header-btn">
+                     Start for Free
+                  </button>
+                  <button class="btn-learn-more white header-btn">
+                     Learn More
+                  </button>
+               </div>
+            </section>
+         </div>
+      </header>
 
-        <hr class="hr wide-hidden">
+      <main class="main">
+         <div class="future-container">
+            <h2 class="future__title darkblue h2">Designed for the future</h2>
+            <section class="main__flex-parent future__flex-parent">
+               <aside class="main__flex-child future__swiggle-child">
+                  <img
+                     src="/images/illustration-editor-mobile.svg"
+                     alt="Red, dark-slate blue and white graphic swiggle illustration."
+                     class="future__swiggle-img"
+                  />
+               </aside>
+               <article class="main__flex-child">
+                  <h3 class="h3 darkblue">Introducing an extensible editor</h3>
+                  <p class="content-width">
+                     Blogr features an exceedingly intuitive interface which
+                     lets you focus on one thing: creating content. The editor
+                     supports management of multiple blogs and allows easy
+                     manipulation of embeds such as images, videos, and
+                     Markdown. Extensibility with plugins and themes provide
+                     easy ways to add functionality or change the looks of a
+                     blog.
+                  </p>
+                  <h3 class="h3 darkblue">Robust content management</h3>
+                  <p class="content-width">
+                     Flexible content management enables users to easily move
+                     through posts. Increase the usability of your blog by
+                     adding customized categories, sections, format, or flow.
+                     With this functionality, you’re in full control.
+                  </p>
+               </article>
+            </section>
+         </div>
 
-        <div class="header__login-signup-container">
-          <a href="/" class="login darkblue">Login</a>
-          <button class="sign-up header-btn-white header-btn">Sign Up</button>
-        </div>
-      </div>
-    </div>
+         <div class="infastructure-container">
+            <section class="main__flex-parent">
+               <aside class="main__flex-child infastructure__phones-parent">
+                  <img
+                     src="/images/illustration-phones.svg"
+                     alt="Red, dark-slate blue and white graphic swiggle illustration."
+                     class="infastructure__phones-img"
+                  />
+               </aside>
+               <article class="main__flex-child">
+                  <h2 class="h2 white infastructure__title">
+                     State of the Art Infrastructure
+                  </h2>
+                  <p class="content-width white">
+                     With reliability and speed in mind, worldwide data centers
+                     provide the backbone for ultra-fast connectivity. This
+                     ensures your site will load instantly, no matter where your
+                     readers are, keeping your site competitive.
+                  </p>
+               </article>
+            </section>
+         </div>
 
-    <div class="header__hero-container">
-      <section class="hero__flex-parent">
-        <h1 class="hero__title white">A modern publishing platform</h1>
-        <h4 class="hero__description white">Grow your audience and build your online brand</h4>
-        <div class="hero__btns-container">
-          <button class="btn-start-free header-btn-white header-btn">Start for Free</button>
-          <button class="btn-learn-more white header-btn">Learn More</button>
-        </div>
-      </section>
-    </div>
-  </header>
+         <div class="free-container">
+            <section class="main__flex-parent free__flex-parent">
+               <aside class="main__flex-child free__laptop-img-container">
+                  <img
+                     src="/images/illustration-laptop-mobile.svg"
+                     alt="Candy red, slate grey and white virtual laptop with Blogr mockup design shown."
+                     class="free__laptop-img"
+                  />
+               </aside>
+               <article class="main__flex-child">
+                  <h3 class="h3 darkblue free-open-subtitle">
+                     Free, open, simple
+                  </h3>
+                  <p class="content-width">
+                     Blogr is a free and open source application backed by a
+                     large community of helpful developers. It supports features
+                     such as code syntax highlighting, RSS feeds, social media
+                     integration, third-party commenting tools, and works
+                     seamlessly with Google Analytics. The architecture is clean
+                     and is relatively easy to learn.
+                  </p>
+                  <h3 class="h3 darkblue">Powerful tooling</h3>
+                  <p class="content-width">
+                     Batteries included. We built a simple and straightforward
+                     CLI tool that makes customization and deployment a breeze,
+                     but capable of producing even the most complicated sites.
+                  </p>
+               </article>
+            </section>
+         </div>
+      </main>
 
+      <footer class="footer">
+         <div class="footer-content-wrapper">
+            <a
+               href="/"
+               aria-label="Interactive Blogr logo, directing to homepage."
+               ><img
+                  src="/images/logo.svg"
+                  alt="Blogr landing-page text logo."
+                  class="footer-logo"
+            /></a>
 
-  <main class="main">
+            <nav class="footer__nav">
+               <ul class="footer-nav__ul">
+                  <li>
+                     <strong class="footer-nav-ul__heading">Product</strong>
+                     <a href="/">Overview</a>
+                     <a href="/">Pricing</a>
+                     <a href="/">Marketplace</a>
+                     <a href="/">Features</a>
+                     <a href="/">Integrations</a>
+                  </li>
+               </ul>
 
-    <div class="future-container">
-      <h2 class="future__title darkblue h2">Designed for the future</h2>
-      <section class="main__flex-parent future__flex-parent">
-        <aside class="main__flex-child future__swiggle-child">
-          <img src="/images/illustration-editor-mobile.svg"
-            alt="Red, dark-slate blue and white graphic swiggle illustration." class="future__swiggle-img" />
-        </aside>
-        <article class="main__flex-child">
-          <h3 class="h3 darkblue">Introducing an extensible editor</h3>
-          <p class="content-width">Blogr features an exceedingly intuitive interface which lets you focus on one thing:
-            creating content.
-            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
-            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
-            change the looks of a blog.
-          </p>
-          <h3 class="h3 darkblue">Robust content management</h3>
-          <p class="content-width">Flexible content management enables users to easily move through posts. Increase the
-            usability of your blog
-            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-          </p>
-        </article>
-      </section>
-    </div>
+               <ul class="footer-nav__ul">
+                  <li>
+                     <strong class="footer-nav-ul__heading">Company</strong>
+                     <a href="/">About</a>
+                     <a href="/">Team</a>
+                     <a href="/">Blog</a>
+                     <a href="/">Careers</a>
+                  </li>
+               </ul>
 
-    <div class="infastructure-container">
-      <section class="main__flex-parent">
-        <aside class="main__flex-child infastructure__phones-parent">
-          <img src="/images/illustration-phones.svg" alt="Red, dark-slate blue and white graphic swiggle illustration."
-            class="infastructure__phones-img">
-        </aside>
-        <article class="main__flex-child">
-          <h2 class="h2 white infastructure__title">State of the Art Infrastructure</h2>
-          <p class="content-width white">With reliability and speed in mind, worldwide data centers provide the backbone
-            for ultra-fast connectivity.
-            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-          </p>
-        </article>
-      </section>
-    </div>
-
-    <div class="free-container">
-      <section class="main__flex-parent free__flex-parent">
-        <aside class="main__flex-child free__laptop-img-container">
-          <img src="/images/illustration-laptop-mobile.svg"
-            alt="Candy red, slate grey and white virtual laptop with Blogr mockup design shown."
-            class="free__laptop-img" />
-        </aside>
-        <article class="main__flex-child">
-          <h3 class="h3 darkblue free-open-subtitle">Free, open, simple</h3>
-          <p class="content-width">Blogr is a free and open source application backed by a large community of helpful
-            developers. It supports
-            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
-            tools,
-            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-          </p>
-          <h3 class="h3 darkblue">Powerful tooling</h3>
-          <p class="content-width"> Batteries included. We built a simple and straightforward CLI tool that makes
-            customization and deployment a breeze, but
-            capable of producing even the most complicated sites.
-          </p>
-        </article>
-      </section>
-    </div>
-
-  </main>
-
-
-  <footer class="footer">
-    <div class="footer-content-wrapper">
-      <a href="/" aria-label="Interactive Blogr logo, directing to homepage."><img src="/images/logo.svg"
-          alt="Blogr landing-page text logo." class="footer-logo"></a>
-
-      <nav class="footer__nav">
-        <ul class="footer-nav__ul">
-          <li>
-            <strong class="footer-nav-ul__heading">Product</strong>
-            <a href="/">Overview</a>
-            <a href="/">Pricing</a>
-            <a href="/">Marketplace</a>
-            <a href="/">Features</a>
-            <a href="/">Integrations</a>
-          </li>
-        </ul>
-
-        <ul class="footer-nav__ul">
-          <li>
-            <strong class="footer-nav-ul__heading">Company</strong>
-            <a href="/">About</a>
-            <a href="/">Team</a>
-            <a href="/">Blog</a>
-            <a href="/">Careers</a>
-          </li>
-        </ul>
-
-        <ul class="footer-nav__ul">
-          <li>
-            <strong class="footer-nav-ul__heading">Connect</strong>
-            <a href="/">Contact</a>
-            <a href="/">Newsletter</a>
-            <a href="/">LinkedIn</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-</body>
-
+               <ul class="footer-nav__ul">
+                  <li>
+                     <strong class="footer-nav-ul__heading">Connect</strong>
+                     <a href="/">Contact</a>
+                     <a href="/">Newsletter</a>
+                     <a href="/">LinkedIn</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </footer>
+   </body>
 </html>
