@@ -44,6 +44,21 @@ Your users should be able to:
 ### What I learned
 
 ```css
+.header {
+   background: linear-gradient(
+         to top,
+         hsl(356, 100%, 66%),
+         rgba(255, 143, 112)
+      ), url('/images/bg-pattern-intro.svg');
+   background-blend-mode: soft-light;
+}
+```
+
+Completely changed way SVG appeared (accent + progression of colours) | add to future CSS list to try out with future assets
+
+background-blend mode to blend them with bg colours (gradient in this case) - great impact on their colour (+ fit with the design)
+
+```css
 .future-container {
    background-position: calc(100% + 240px) 60%;
    /* pinned to viewport edge */
@@ -56,12 +71,32 @@ Your users should be able to:
    top: 50%;
    /* switched to being pinned with content */
 }
+```
 
+Bg imgs -
+
+```css
 .infastructure__phones-parent {
    min-height: 3.5rem;
    /* control empty flex-child at mobile size (height didn't work) */
 }
+
+.infastructure__phones-img {
+   top: -177px;
+   right: 8%;
+   width: 600px;
+}
 ```
+
+```js
+const [header, hamburgerBtn, arrows] = [
+   domSelect('.header'),
+   domSelect('#hamburger'),
+   domSelectAll('.arrow'),
+]
+```
+
+Destructuring - cant use var which declaring in same line with another | helper functions
 
 ```js
 const paths = {
@@ -82,15 +117,21 @@ const src = {
 src[hamburgerBtn.src.includes('close') ? 'normal' : 'close']()
 ```
 
+```js
+function reset() {
+   const navLists = domSelectAll('.header-nav__ul')
+   for (const list of navLists) list.classList.add('hamburger-hidden')
+   for (const arrow of arrows) arrow.classList.remove('rotate')
+}
+```
+
+Loop logic for nav arrows (multiple other use cases - FAQ accordians) | classic technique - commonly used (React docs + complicated/bloated navigations)
+
 ### Continued development
 
-Better HTML for mobile navigation (hamburger animation) |
+Hamburger animation | SVG - controlling them + animating them (again only where appropiate)
 
-wider transitions use of transitions where appropiate
-
-Clamp() usage - not relying on it to fill space for tablet design
-
-SVG - controlling them + animating them (again only where appropiate) | background-blend mode to blend them with bg colours (gradient in this case) - great impact on their colour (+ fit with the design)
+Clamp() usage - not relying on it to fill space for tablet design | innappropiate sizes - look forward to attempting a 'premium' project where tablet designs provided (for inspiration) | other logic funcs - min() + max() - for spacing maybe vs just fonts?
 
 ### Useful resources
 
