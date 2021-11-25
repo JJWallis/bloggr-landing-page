@@ -44,7 +44,12 @@ Your users should be able to:
 ### What I learned
 
 ```html
-
+<div
+   class="header__mobilebg-nav-container hidden hamburger-hidden"
+   id="mobile-nav"
+>
+   <nav class="header__nav">...</nav>
+</div>
 ```
 
 Sep container for mobile navigation + sep one for wider styles | failed attempt at 1 dynamic container to accomodate both layouts (not possible - however maybe with grid but not necessary)
