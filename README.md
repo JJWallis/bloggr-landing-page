@@ -132,7 +132,3 @@ Destructuring practice - tried to use those same vars with others destructured o
 Modules next time for arrow img paths - vs storing in obj (better than vars)
 
 Callback practice - breaking up our event handler into sep func + running as direct callback (something I never used to do)
-
-Testing, testing, testing
-
-Testing, testing, testing
