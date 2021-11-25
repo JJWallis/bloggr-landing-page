@@ -43,6 +43,14 @@ Your users should be able to:
 
 ### What I learned
 
+```html
+
+```
+
+Sep container for mobile navigation + sep one for wider styles | failed attempt at 1 dynamic container to accomodate both layouts (not possible - however maybe with grid but not necessary)
+
+BEM naming throughout - 1st use to this extent | massive benefits vs bulky class markup
+
 ```css
 .header {
    background: linear-gradient(
@@ -145,11 +153,3 @@ Clamp() usage - not relying on it to fill space for tablet design | innappropiat
 
 -  Website - [Joshua Jameson-Wallis](https://joshuajamesonwallis.com)
 -  Linkedin - [Joshua Jameson-Wallis]()
-
-HTML:
-
-Sep container for mobile navigation + sep one for wider styles | failed attempt at 1 dynamic container to accomodate both layouts (not possible - however maybe with grid but not necessary)
-
-BEM naming throughout - 1st use to this extent | massive benefits vs bulky class markup
-
-Semantic wrappers - attempting to escape div overuse | asides + articles within sections | lists more - beyond nav (social icons)
