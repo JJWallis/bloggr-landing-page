@@ -73,7 +73,7 @@ background-blend mode to blend them with bg colours (gradient in this case) - gr
 }
 ```
 
-Bg imgs -
+Bg imgs pinned to browser viewport edges - clamp(0% - ... / 100% + ...) | full page containers + ultility class/container under to align content (nice effect) | positioned at wider viewports - doesn't fly off side when max-width hits (changed what positioned relative to + moves with rest of content) | positioning imgs - great as freedom (overlapping is an issue - fixed px width can help) | header SVG bg-img - fluid but stretching issue (fixed width - don't have issue)
 
 ```css
 .infastructure__phones-parent {
@@ -87,6 +87,8 @@ Bg imgs -
    width: 600px;
 }
 ```
+
+Phone imgs - positioned + fluid position so scales as browser shrinks/grows (but fixed vertical value so didn't become affected by other content wrapping + container heights switching) | bg-img for that section - positioned at top + fluid size so scaled from there (didn't want to just rely on giving everything fixed px value as solution) | empty flex child for mobile - min-height + width (or else collapsed - didn't happen at row layout as flex-grow/basis)
 
 ```js
 const [header, hamburgerBtn, arrows] = [
@@ -125,6 +127,8 @@ function reset() {
 }
 ```
 
+Arrow logic - loop to reset styles + make sure only one user wants to see if shown/facing up
+
 Loop logic for nav arrows (multiple other use cases - FAQ accordians) | classic technique - commonly used (React docs + complicated/bloated navigations)
 
 ### Continued development
@@ -135,14 +139,12 @@ Clamp() usage - not relying on it to fill space for tablet design | innappropiat
 
 ### Useful resources
 
--  [Min(), Max() & Clamp()](https://www.youtube.com/watch?v=U9VF-4euyRo&ab_channel=KevinPowell) - This was a great video by Kevin explaining some of the methods we may use to achieve 'fluid topography' between different viewport sizes. Although browser support is not at the level we may desire, we can use feature queries to create fallbacks to support older browsers that don't yet recognise it.
+-  [Min(), Max() & Clamp()](https://www.youtube.com/watch?v=U9VF-4euyRo&ab_channel=KevinPowell) - This was a great video by Kevin explaining some of the methods we may use to achieve 'fluid topography' between different viewport sizes. Although browser support is not at the level we may desire, we can use feature queries to create fallbacks to support older browsers that don't yet recognise these properties.
 
 ## Author
 
 -  Website - [Joshua Jameson-Wallis](https://joshuajamesonwallis.com)
 -  Linkedin - [Joshua Jameson-Wallis]()
-
-###### TODO
 
 HTML:
 
@@ -151,25 +153,3 @@ Sep container for mobile navigation + sep one for wider styles | failed attempt 
 BEM naming throughout - 1st use to this extent | massive benefits vs bulky class markup
 
 Semantic wrappers - attempting to escape div overuse | asides + articles within sections | lists more - beyond nav (social icons)
-
-CSS:
-
-Hr styles - thin (similar with borders - opacity change for softness)
-
-Bg imgs pinned to browser viewport edges - clamp(0% - ... / 100% + ...) | full page containers + ultility class/container under to align content (nice effect) | positioned at wider viewports - doesn't fly off side when max-width hits (changed what positioned relative to + moves with rest of content) | positioning imgs - great as freedom (overlapping is an issue - fixed px width can help) | header SVG bg-img - fluid but stretching issue (fixed width - don't have issue)
-
-Header nav - space-between full width + then 80% width on wider screen sizes (aligned with content - else spacing not enough between both edges)
-
-Text widths - controlling everything via fluid width change of parent container (vs max-width of individual els - restrive + break layout often)
-
-Phone imgs - positioned + fluid position so scales as browser shrinks/grows (but fixed vertical value so didn't become affected by other content wrapping + container heights switching) | bg-img for that section - positioned at top + fluid size so scaled from there (didn't want to just rely on giving everything fixed px value as solution) | empty flex child for mobile - min-height + width (or else collapsed - didn't happen at row layout as flex-grow/basis)
-
-JS:
-
-Arrow logic - loop to reset styles + make sure only one user wants to see if shown/facing up
-
-Destructuring practice - tried to use those same vars with others destructured on same line (incorrect) |
-
-Modules next time for arrow img paths - vs storing in obj (better than vars)
-
-Callback practice - breaking up our event handler into sep func + running as direct callback (something I never used to do)
