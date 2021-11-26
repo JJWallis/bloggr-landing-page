@@ -99,7 +99,9 @@ This still did not completely solve my problem, as at ultra-wide viewport sizes 
 }
 ```
 
-Phone imgs - positioned + fluid position so scales as browser shrinks/grows (but fixed vertical value so didn't become affected by other content wrapping + container heights switching) | bg-img for that section - positioned at top + fluid size so scaled from there (didn't want to just rely on giving everything fixed px value as solution) | empty flex child for mobile - min-height + width (or else collapsed - didn't happen at row layout as flex-grow/basis)
+The mobile-phone images provided a great challenge in using both relative and fixed unit lengths, in order to control when the asset would grow and when it would stay pinned with changing sections of content. In order to create the desired background for the image at mobile and tablet devices, I had to apply to a `min-height` to its parent flex container to create the room (since both a fixed and max-height did not work). This would then need to be reset at wider screen sizes, else flex would respond all other children heights to match that minimun value with a 'row' direction.
+
+As for the phone image itself, I applied a fuild size so it would grow up to wider screens where I then overrode that value with a fixed size, whilst changing its positioned-relative parent to the background flex-child. Similarly to the background images, this allowed it to respond in line with the primary content when the max-width hit.
 
 ```js
 const [header, hamburgerBtn, arrows] = [
