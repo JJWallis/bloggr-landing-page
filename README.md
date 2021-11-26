@@ -111,26 +111,7 @@ const [header, hamburgerBtn, arrows] = [
 ]
 ```
 
-Destructuring - cant use var which declaring in same line with another | helper functions
-
-```js
-const paths = {
-   hamburgerBtnPath: './images/icon-hamburger.svg',
-   closeBtnPath: './images/icon-close.svg',
-   lightArrow: './images/icon-arrow-light.svg',
-   darkArrow: './images/icon-arrow-dark.svg',
-} // not most efficient - better than previous times!
-
-const src = {
-   normal() {
-      hamburgerBtn.src = paths.hamburgerBtnPath
-   },
-   close() {
-      hamburgerBtn.src = paths.closeBtnPath
-   },
-}
-src[hamburgerBtn.src.includes('close') ? 'normal' : 'close']()
-```
+I was proud of my ability to use destructuring in this project, in a simple attempt to save unnecessary lines of code. However, although I feel that I am thinking in the correct manner when using the technique, I do believe I overused it and sometimes it would be more readable to decalre multiple variables (for example) on different lines.
 
 ```js
 function reset() {
