@@ -65,26 +65,26 @@ When I first started building the HTML markup for this project, I really struggl
 }
 ```
 
-Completely changed way SVG appeared (accent + progression of colours) | add to future CSS list to try out with future assets
-
-background-blend mode to blend them with bg colours (gradient in this case) - great impact on their colour (+ fit with the design)
+The header design in this project provided a great means to practicing background SVG placement and responsiveness, whilst also controlling how it blended with a gradient applied over the top. Since a gradient is technically a background-image, I had to practice layering multiple background images on top of one another, which was a technique I hadn't attempted before. I was suprised at the extent to which applying a different `background-blend-mode` would completely change the accented colour displayed throughout the SVG, which clearly provides a convient way to achieve this effect without having to manually change the `fill` colour in the XML code.
 
 ```css
 .future-container {
    background-position: calc(100% + 240px) 60%;
-   /* pinned to viewport edge */
-   background-size: 700px; /* for wider viewports */
+   background-size: 700px;
 }
 
 .future__flex-parent::before {
    position: absolute;
    left: 60%;
    top: 50%;
-   /* switched to being pinned with content */
 }
 ```
 
-Bg imgs pinned to browser viewport edges - clamp(0% - ... / 100% + ...) | full page containers + ultility class/container under to align content (nice effect) | positioned at wider viewports - doesn't fly off side when max-width hits (changed what positioned relative to + moves with rest of content) | positioning imgs - great as freedom (overlapping is an issue - fixed px width can help) | header SVG bg-img - fluid but stretching issue (fixed width - don't have issue)
+By far the most challenging feature of this project was controlling the responsiveness of the primary background images, within the `<main>` sections of content. This was not too difficult to achieve at mobile and tablet screens, for which I placed them within a responsive flex container to keep them aligned with the rest of the content.
+
+However, I had to learn and implement the CSS `calc()` function to achieve the design of keeping both images pinned to opposite sides of the viewport, especially as both sides scaled further apart from one another. Using a calc value of 100% plus a desired fixed amount added on top would pin the image to the right viewport edge, whilst a value of 0% minus a fixed amount would do so to the left.
+
+This still did not completely solve my problem, as at ultra-wide viewport sizes both images would fly off to the sides and become mis-aligned with the primary content when the max-width hit on my utility class. In order to solve this, I decided to position the images in relation to their corresponding empty flex container within the primary content, so they would respond in line with the centered content.
 
 ```css
 .infastructure__phones-parent {
