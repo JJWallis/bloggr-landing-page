@@ -52,9 +52,7 @@ Your users should be able to:
 </div>
 ```
 
-Sep container for mobile navigation + sep one for wider styles | failed attempt at 1 dynamic container to accomodate both layouts (not possible - however maybe with grid but not necessary)
-
-BEM naming throughout - 1st use to this extent | massive benefits vs bulky class markup
+When I first started building the HTML markup for this project, I really struggled with creating a layout that accomodated both the mobile and desktop navigation design. However, having researched multiple solutions via the Front End Mentor platform, I realsied that it was perfectly ok to create an entirely separate section of markup for the mobile design, which would ultimately be rendered invisible at wider screen sizes. I was also able to make use of the BEM naming convention to help differentiate between both sections of markup within the <header>, while styling them in a related manner within my stylesheets.
 
 ```css
 .header {
