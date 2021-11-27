@@ -80,7 +80,7 @@ The header design in this project provided a great means to practicing backgroun
 }
 ```
 
-By far the most challenging feature of this project was controlling the responsiveness of the primary background images, within the `<main>` sections of content. This was not too difficult to achieve at mobile and tablet screens, for which I placed them within a responsive flex container to keep them aligned with the rest of the content.
+By far the most challenging feature of this project was controlling the responsiveness of the primary background images, within the `<main>` sections of the content. This was not too difficult to achieve at mobile and tablet screens, for which I placed them within a responsive flex container to keep them aligned with the rest of the content.
 
 However, I had to learn and implement the CSS `calc()` function to achieve the design of keeping both images pinned to opposite sides of the viewport, especially as both sides scaled further apart from one another. Using a calc value of 100% plus a desired fixed amount added on top would pin the image to the right viewport edge, whilst a value of 0% minus a fixed amount would do so to the left.
 
@@ -89,7 +89,6 @@ This still did not completely solve my problem, as at ultra-wide viewport sizes 
 ```css
 .infastructure__phones-parent {
    min-height: 3.5rem;
-   /* control empty flex-child at mobile size (height didn't work) */
 }
 
 .infastructure__phones-img {
@@ -99,9 +98,9 @@ This still did not completely solve my problem, as at ultra-wide viewport sizes 
 }
 ```
 
-The mobile-phone images provided a great challenge in using both relative and fixed unit lengths, in order to control when the asset would grow and when it would stay pinned with changing sections of content. In order to create the desired background for the image at mobile and tablet devices, I had to apply to a `min-height` to its parent flex container to create the room (since both a fixed and max-height did not work). This would then need to be reset at wider screen sizes, else flex would respond all other children heights to match that minimun value with a 'row' direction.
+The mobile-phone image provided a great challenge in using both relative and fixed unit lengths, in order to control when the asset would grow and when it would stay pinned with changing sections of content. In order to create the desired background for the image at mobile and tablet devices, I had to apply a `min-height` to its parent flex container to create the room (since both a fixed and max-height did not work). This would then need to be reset at wider screen sizes, else the parent would respond all child heights to match that minimun value with a 'row' direction.
 
-As for the phone image itself, I applied a fuild size so it would grow up to wider screens where I then overrode that value with a fixed size, whilst changing its positioned-relative parent to the background flex-child. Similarly to the background images, this allowed it to respond in line with the primary content when the max-width hit.
+As for the phone image itself, I applied a fuild size so it would grow up to wider screens, where I then overrode that value with a fixed size whilst changing its positioned-relative parent to the background flex-child. Similarly to the background images, this allowed it to respond in line with the primary content when the max-width hit.
 
 ```js
 const [header, hamburgerBtn, arrows] = [
@@ -111,7 +110,7 @@ const [header, hamburgerBtn, arrows] = [
 ]
 ```
 
-I was proud of my ability to use destructuring in this project, in a simple attempt to save unnecessary lines of code. However, although I feel that I am thinking in the correct manner when using the technique, I do believe I overused it and sometimes it would be more readable to decalre multiple variables (for example) on different lines.
+I was proud of my ability to use destructuring in this project, in a simple attempt to save unnecessary lines of code. However, although I feel that I am thinking in the correct manner when using the technique, I do believe I overused it and sometimes it would be more readable to decalre multiple variables on different lines for example.
 
 ```js
 function reset() {
@@ -121,13 +120,13 @@ function reset() {
 }
 ```
 
-I feel the block of code above showcases a good number of recently learnt techniques, whilst successfully re-creating a classic 'piece' of logic which I have personally seen used in multiple different scenarios (complicated navigations such as the React docs). In this particular project I used the function to reset all the arrow styles for the navigation when a user clicked on a link, rotating them to all face downwards whilst then 're-rotating' the one the user clicked.
+I feel the block of code above showcases a good number of recently learnt techniques, whilst successfully re-creating a classic 'piece' of logic which I have personally seen used in multiple different scenarios, including complicated navigations such as the React docs. In this particular project, I used the function to reset all the arrow styles for the navigation when a user clicked on a link, rotating them to all face downwards whilst then 're-rotating' the one the user clicked to face up.
 
 ### Continued development
 
 For future projects I would like to learn about more complicated CSS animations using the `animation` property. Although I do realise this can have negative impacts on accessibility and should only be used where appropiate, I feel it would enhance my knowledge of the language, whilst adding a level of sophistication to a finished project.
 
-Furthermore, I feel as if I relied too heavily on the CSS `clamp()` function to fill the space between tablet and wider screen sizes. As a result, the font size appeared unecessarily large which reduced the visual distinction between different importance levels of text (headings vs paragraphs). Although this is clearly a very useful technique to know about, I would like to dive deeper into other methods of filling empty space that may appear in responsive design.
+Furthermore, I feel as if I relied too heavily on the CSS `clamp()` function to fill the space between tablet and wider screen sizes. As a result, the font size appeared unecessarily large which reduced the visual distinction between different importance levels of text (headings and paragraphs). Although this is clearly a very useful technique to know about, I would like to dive deeper into other methods of filling empty space that may appear in responsive design.
 
 ### Useful resources
 
