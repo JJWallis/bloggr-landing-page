@@ -65,7 +65,7 @@ When I first started creating the HTML markup for this project, I really struggl
 }
 ```
 
-The header design in this project provided a great means to practicing background SVG placement and responsiveness, whilst also controlling how it blended with a gradient applied over the top. Since a gradient is technically a background-image, I had to practice layering multiple background images on top of one another, which was a technique I hadn't attempted before. I was suprised at the extent to which applying a different `background-blend-mode` would completely change the accented colour displayed throughout the SVG, which clearly provides a convient way to achieve this effect without having to manually change the `fill` colour in the XML code.
+The header design in this project provided a great means to practicing background SVG placement and responsiveness, whilst also controlling how it blended with a gradient applied over the top. Since a gradient is technically a background-image, I had to practice layering multiple background images on top of one another, which was a technique I hadn't attempted before. I was suprised at the extent to which applying a different `background-blend-mode` would completely change the accented colour displayed throughout the SVG itself, which clearly provides a convenient way to achieve this effect without having to manually change the `fill` colour in the XML code.
 
 ```css
 .future-container {
