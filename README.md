@@ -52,7 +52,7 @@ Your users should be able to:
 </div>
 ```
 
-When I first started building the HTML markup for this project, I really struggled with creating a layout that accomodated both the mobile and desktop navigation design. However, having researched multiple solutions via the Front End Mentor platform, I realsied that it was perfectly ok to create an entirely separate section of markup for the mobile design, which would ultimately be rendered invisible at wider screen sizes. I was also able to make use of the BEM naming convention to help differentiate between both sections of markup within the <header>, while styling them in a related manner within my stylesheets.
+When I first started creating the HTML markup for this project, I really struggled with creating a layout that accomodated both the mobile and desktop navigation layout. However, having researched multiple solutions via the Front End Mentor platform, I realsied that it was perfectly ok to create an entirely separate section of markup for the mobile layout, which would ultimately be rendered invisible at wider viewports. I was also able to make use of the BEM naming convention to help differentiate between both sections of markup within the header, while styling them in a related manner within my stylesheets.
 
 ```css
 .header {
