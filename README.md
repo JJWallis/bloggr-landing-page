@@ -37,8 +37,8 @@ Your users should be able to:
 ### Built with
 
 -  Semantic HTML5 markup
--  Flexbox
 -  Mobile-first workflow
+-  Flexbox
 -  Vanilla JS
 
 ### What I learned
@@ -130,9 +130,9 @@ Furthermore, I feel as if I relied too heavily on the CSS `clamp()` function to 
 
 ### Useful resources
 
--  [Min(), Max() & Clamp()](https://www.youtube.com/watch?v=U9VF-4euyRo&ab_channel=KevinPowell) - This was a great video by Kevin explaining some of the methods we may use to achieve 'fluid topography' between different viewport sizes. Although browser support is not at the level we may desire, we can use feature queries to create fallbacks to support older browsers that don't yet recognise these properties.
+-  [Min(), Max() & Clamp()](https://www.youtube.com/watch?v=U9VF-4euyRo&ab_channel=KevinPowell) - This was a great video by Kevin explaining some of the methods we can use to achieve 'fluid topography' between different viewport sizes. We can also make use of feature queries to create fallbacks to support older browsers that don't yet recognise these properties.
 
 ## Author
 
 -  Website - [Joshua Jameson-Wallis](https://joshuajamesonwallis.com)
--  Linkedin - [Joshua Jameson-Wallis]()
+-  Linkedin - [Joshua Jameson-Wallis](https://www.linkedin.com/in/joshua-jameson-wallis/)
