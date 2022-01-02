@@ -80,11 +80,11 @@ The header design in this project provided a great means to practicing backgroun
 }
 ```
 
-By far the most challenging feature of this project was controlling the responsiveness of the primary background images, within the `<main>` sections of the content. This was not too difficult to achieve at mobile and tablet screens, for which I placed them within a responsive flex container to keep them aligned with the rest of the content.
+By far the most challenging feature of this project was controlling the responsiveness of the primary background images within the main sections of content. This was not too difficult to achieve for mobile and tablet devices, since I was able to place them within a responsive flex container to keep them aligned with the rest of the content.
 
-However, I had to learn and implement the CSS `calc()` function to achieve the design of keeping both images pinned to opposite sides of the viewport, especially as both sides scaled further apart from one another. Using a calc value of 100% plus a desired fixed amount added on top would pin the image to the right viewport edge, whilst a value of 0% minus a fixed amount would do so to the left.
+However, I had to learn and implement the CSS `calc()` function to achieve the design of keeping both images pinned to opposite sides of the viewport, especially as both sides grew further. Using a calc value of 100% plus a desired fixed amount (using absolute units) added on top would pin the image to the right viewport edge, whilst a value of 0% minus a fixed amount would do so to the left.
 
-This still did not completely solve my problem, as at ultra-wide viewport sizes both images would fly off to the sides and become mis-aligned with the primary content when the max-width hit on my utility class. In order to solve this, I decided to position the images in relation to their corresponding empty flex container within the primary content, so they would respond in line with the centered content.
+This still did not completely solve my problem, as at ultra-wide viewport sizes both images would fly off to the sides and become mis-aligned with the primary content when the primary maximum width hit. In order to solve this, I decided to position the images in relation to their corresponding empty flex container, so they would respond in line with the centered content.
 
 ```css
 .infastructure__phones-parent {
