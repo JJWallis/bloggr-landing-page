@@ -120,13 +120,13 @@ function reset() {
 }
 ```
 
-I feel the block of code above showcases a good number of recently learnt techniques, whilst successfully re-creating a classic 'piece' of logic which I have personally seen used in multiple different scenarios, including complicated navigations such as the React docs. In this particular project, I used the function to reset all the arrow styles for the navigation when a user clicked on a link, rotating them to all face downwards whilst then 're-rotating' the one the user clicked to face up.
+I feel the block of code above showcases a good number of recently learnt techniques, whilst successfully re-creating a classic piece of logic which I have personally seen used in multiple different scenarios, including bulky navigations such as the React docs. In this particular project, I used the function to reset all the arrow styles for the navigation when a user clicked on a link, rotating them to all face downwards whilst then 're-rotating' the one the user clicked to face up.
 
 ### Continued development
 
-For future projects I would like to learn about more complicated CSS animations using the `animation` property. Although I do realise this can have negative impacts on accessibility and should only be used where appropiate, I feel it would enhance my knowledge of the language, whilst adding a level of sophistication to a finished project.
+For future projects I would like to learn more about complicated CSS animations using the `animation` property. Although I do realise this can have negative impacts on accessibility and should only be used where appropiate, I feel it would enhance my knowledge of the language, whilst adding a level of sophistication to a finished project.
 
-Furthermore, I feel as if I relied too heavily on the CSS `clamp()` function to fill the space between tablet and wider screen sizes. As a result, the font size appeared unecessarily large which reduced the visual distinction between different importance levels of text (headings and paragraphs). Although this is clearly a very useful technique to know about, I would like to dive deeper into other methods of filling empty space that may appear in responsive design.
+Furthermore, I feel as if I relied too heavily on the CSS `clamp()` function to fill the space between tablet and wider screen sizes. As a result, the font size appeared unecessarily large which reduced the visual distinction between different levels of text (headings and paragraphs). Although this is clearly a very useful technique to know about, I would like to dive deeper into other methods of filling empty space that other developers may utilise.
 
 ### Useful resources
 
