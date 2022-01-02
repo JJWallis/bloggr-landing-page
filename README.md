@@ -110,7 +110,7 @@ const [header, hamburgerBtn, arrows] = [
 ]
 ```
 
-I was proud of my ability to use destructuring in this project, in a simple attempt to save unnecessary lines of code. However, although I feel that I am thinking in the correct manner when using the technique, I do believe I overused it and sometimes it would be more readable to decalre multiple variables on different lines for example.
+I was proud of my ability to use destructuring in this project, in a simple attempt to save unnecessary lines of code. However, although I feel that I am thinking in the correct manner when using the technique, I do believe I overused it in certain cases where it would have been more readable to declare multiple variables on different lines.
 
 ```js
 function reset() {
