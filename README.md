@@ -114,9 +114,9 @@ I was proud of my ability to use destructuring in this project, in a simple atte
 
 ### Continued development
 
-For future projects I would like to learn more about complicated CSS animations using the `animation` property. Although I do realise this can have negative impacts on accessibility and should only be used where appropiate, I feel it would enhance my knowledge of the language, whilst adding a level of sophistication to a finished project.
+For future projects, I would like to learn more about complicated CSS animations, although I realise this can have negative impacts on accessibility and should only be used where appropiate.
 
-Furthermore, I feel as if I relied too heavily on the CSS `clamp()` function to fill the space between tablet and wider screen sizes. As a result, the font size appeared unecessarily large which reduced the visual distinction between different levels of text (headings and paragraphs). Although this is clearly a very useful technique to know about, I would like to dive deeper into other methods of filling empty space that other developers may utilise.
+Furthermore, I feel as if I relied too heavily on the CSS `clamp()` function to increase font sizes to fill the space between tablets and desktops. The resulting font size appeared unecessarily large and reduced the visual distinction between different levels of text (headings and paragraphs).
 
 ### Useful resources
 
