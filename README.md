@@ -112,16 +112,6 @@ const [header, hamburgerBtn, arrows] = [
 
 I was proud of my ability to use destructuring in this project, in a simple attempt to save unnecessary lines of code. However, I need to be aware of situations where it would be more readable to declare multiple variables on different lines.
 
-```js
-function reset() {
-   const navLists = domSelectAll('.header-nav__ul')
-   for (const list of navLists) list.classList.add('hamburger-hidden')
-   for (const arrow of arrows) arrow.classList.remove('rotate')
-}
-```
-
-I feel the block of code above showcases a good number of recently learnt techniques, whilst successfully re-creating a classic piece of logic which I have personally seen used in multiple different scenarios, including bulky navigations such as the React docs. In this particular project, I used the function to reset all the arrow styles for the navigation when a user clicked on a link, rotating them to all face downwards whilst then 're-rotating' the one the user clicked to face up.
-
 ### Continued development
 
 For future projects I would like to learn more about complicated CSS animations using the `animation` property. Although I do realise this can have negative impacts on accessibility and should only be used where appropiate, I feel it would enhance my knowledge of the language, whilst adding a level of sophistication to a finished project.
