@@ -52,7 +52,7 @@ Your users should be able to:
 </div>
 ```
 
-When I first started creating the HTML markup for this project, I really struggled with creating a layout that accomodated both the mobile and desktop navigation layout. However, having researched multiple solutions via the Front End Mentor platform, I realsied that it was perfectly ok to create an entirely separate section of markup for the mobile layout, which would ultimately be rendered invisible at wider viewports. I was also able to make use of the BEM naming convention to help differentiate between both sections of markup within the header, while styling them in a related manner within my stylesheets.
+I originally struggled with writing the HTML markup that accomodated for both the mobile and desktop navigation designs. However, upon further research I realsied that it was perfectly ok to create an entirely separate section of markup for the mobile layout, which would ultimately be rendered invisible at wider viewports. I was also able to make use of the BEM naming convention to help differentiate between both sections of markup within the header, while styling them in a related manner within my stylesheets.
 
 ```css
 .header {
@@ -65,7 +65,7 @@ When I first started creating the HTML markup for this project, I really struggl
 }
 ```
 
-The header design in this project provided a great means to practicing background SVG placement and responsiveness, whilst also controlling how it blended with a gradient applied over the top. Since a gradient is technically a background-image, I had to practice layering multiple background images on top of one another, which was a technique I hadn't attempted before. I was suprised at the extent to which applying a different `background-blend-mode` would completely change the accented colour displayed throughout the SVG itself, which clearly provides a convenient way to achieve this effect without having to manually change the `fill` colour in the XML code.
+The header design in this project provided a great means to practicing background SVG placement and responsiveness, whilst also controlling how it blended with a gradient applied over the top. Since a gradient is technically a background-image I had to practice layering multiple background images on top of one another. I was suprised at the extent to which applying a different `background-blend-mode` would completely change the accented colour displayed throughout the SVG itself, instead of manually change the fill colour.
 
 ```css
 .future-container {
