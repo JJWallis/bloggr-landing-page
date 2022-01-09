@@ -98,9 +98,9 @@ For ultra-wide desktops I decided to position the images in relation to their co
 }
 ```
 
-The mobile-phone image provided a great challenge in using both relative and absolute units, in order to control when the asset would grow and when it would stay pinned with changing sections of content. In order to match the original design at mobile and tablet devices, I had to apply a `min-height` to its parent flex container to create the room (since both a fixed and `max-height` did not work). This would then need to be reset at wider screen sizes, else the parent would respond all child heights to match that minimun value when its direction changed to row.
+The mobile-phone image provided a great challenge in using both relative and absolute units, in order to control when the asset would grow and when it would stay pinned with changing sections of content. In order to match the original design at mobile and tablet devices, I had to apply a `min-height` to its parent flex container to create the room (since both a fixed and `max-height` did not work). This would then need to be reset at wider screen sizes since by default the flex parent would respond all child heights to match that minimun value.
 
-As for the phone image itself, I applied a fuild size so it would grow up to wider screens, where I then overrode that value with a fixed size, whilst changing its relatively-positioned parent to the background flex-child. This also allowed it to respond in line with the primary content when the primary maximum width hit.
+As for the phone image itself, I applied a fuild size so it would grow up to wider screens, where I then overrode that value with a fixed size whilst changing its relatively-positioned parent to the background flex-child. This also allowed it to respond in line with the primary content when the primary maximum width hit.
 
 ```js
 const [header, hamburgerBtn, arrows] = [
@@ -110,7 +110,7 @@ const [header, hamburgerBtn, arrows] = [
 ]
 ```
 
-I was proud of my ability to use destructuring in this project, in a simple attempt to save unnecessary lines of code. However, although I feel that I am thinking in the correct manner when using the technique, I do believe I overused it in certain cases where it would have been more readable to declare multiple variables on different lines.
+I was proud of my ability to use destructuring in this project, in a simple attempt to save unnecessary lines of code. However, I need to be aware of situations where it would be more readable to declare multiple variables on different lines.
 
 ```js
 function reset() {
