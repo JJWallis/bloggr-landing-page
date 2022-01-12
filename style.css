@@ -1,13 +1,3 @@
-/* 
-TO DO:
-
-JS - animate opening/closing nav 
-
-Update class names for hidden els 
-Class for flex-display | REMS for px 
-Feature queries for clamp() 
- */
-
 *,
 *::before,
 *::after {
@@ -197,7 +187,7 @@ button {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 70%;
+   width: 80%;
 }
 
 .hero__title {
